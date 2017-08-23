@@ -1,0 +1,97 @@
+body {
+    font-family: 'EvolventaRegular', sans-serif;
+    font-weight: normal;
+    font-style: normal; 
+    background-color: #ffffff;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 0;
+    color: black;
+}
+
+@font-face {
+    font-family: EvolventaRegular;
+    src: url(fonts/Evolventa.ttf);
+    src: local(EvolventaRegular), url(fonts/Evolventa.ttf);
+}            
+@font-face {
+    font-family: Franklin;
+    src: url(fonts/FranklinGothicMedium.ttf);
+    src: local(Franklin), url(fonts/FranklinGothicMedium.ttf);
+}            
+@font-face {
+    font-family: GothamPro;
+    src: url(fonts/GothamPro.otf);
+    src: local(GothamPro), url(fonts/GothamPro.otf);
+}            
+@font-face {
+    font-family: Muller;
+    src: url(fonts/MullerThin.otf);
+    src: local(Muller), url(fonts/MullerThin.otf);
+}
+
+.wrap-site {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.fix-head {
+    font-family: 'GothamPro', sans-serif;
+    font-weight: normal;
+    font-style: normal; 
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    background-color: none;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.fix-head.sticky {
+    background-color: #ececece6;
+}
+
+.head {
+    min-width: 320px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.site-header {
+    font-family: 'Muller', sans-serif;
+    font-weight: normal;
+    font-style: normal; 
+    font-size: 18px;
+    background-image: url(../img/backgr-head.png);
+    background-size: 106%;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 650px;
+}
+.navbar-nav {
+    margin: 20px 0 0 auto;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.navbar-nav.sticky {
+    margin: 0 0 0 auto;
+}
+
+.logo {
+    width: 110px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.logo.sticky {
+    width: 90px;
+}
+
+.breadcrumb {
+    border-color: none;
+}

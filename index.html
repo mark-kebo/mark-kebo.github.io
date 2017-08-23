@@ -3,15 +3,59 @@
 
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>My site</title>
-        <meta name="description" content="Mark Kebo">
-        <link rel="stylesheet" href="main.css">
+        <title>Разработка современных сайтов, мобильных приложений и веб-дизайна</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/media.css">
     </head>
     <body>
-
-		<h1>Hi, My name's Mark</h1>
-        <h1>But Kate is KORCH!!</h1>
-
+		<div class="wrap-site">
+            <header class="site-header">
+                <div class="fix-head">
+                <div class="head">
+                    <div class="row">
+                        <div class="col">
+                            <img class="logo" src="img/logo-head.png" alt="Разработка современных сайтов, мобильных приложений и веб-дизайна">
+                        </div>
+                        <div class="col-6">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                                     <span class="navbar-toggler-icon"></span>
+                                </button>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <div class="navbar-nav">
+                                    <a class="nav-item nav-link active" href="#">Главная <span class="sr-only">(current)</span></a>
+                                    <a class="nav-item nav-link" href="#">О Hас</a>
+                                    <a class="nav-item nav-link" href="#">Портфолио</a>
+                                    <a class="nav-item nav-link" href="#">Контакты</a>
+                                </div>
+                            </div>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <nav class="breadcrumb">
+                                <span class="breadcrumb-item active">Ru</span>
+                                <a class="breadcrumb-item" href="#">En</a>
+                                <a class="breadcrumb-item" href="#">Pl</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </header>
+        
+            <div class="site-content">
+            Note that depending on how they are used,<br> badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges <br>provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the<br> specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link or button. <br>Unless the context is clear (as with the “Notifications” example, where it is arguably understandable that the “4” gives a count <br>of the number of notifications), consider including additional context – for instance using a visually hidden piece of additional<br><br><br> text.
+            </div>
+            
+            <footer class="site-footer">
+            Note that depending on how they are used, badges may be confusing for <br>users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their<br> purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges<br> may seem like random additional words or numbers at the end of a sentence, link or button. Unless the context is clear (as <br>with the “Notifications” example, where it is arguably understandable that the “4” gives a count of the number of notifications),<br> consider including additional context – for instance using a visually hidden piece of additional <br>text.
+            </footer>
+            
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
