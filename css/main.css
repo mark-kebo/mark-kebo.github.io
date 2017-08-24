@@ -77,6 +77,10 @@ body {
     margin: 20px 0 0 auto;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    margin-left: 15px;
+}
+.nav-link {
+    margin-left: 15px;
 }
 .navbar-nav.sticky {
     margin: 0 0 0 auto;
@@ -92,6 +96,37 @@ body {
     width: 90px;
 }
 
+.collapse.show {
+    background-color: #ececece6;
+    border-radius: 5px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    margin: 5px;
+}
+
+.navbar-toggler {
+    margin: auto 0 auto auto;
+}
+
 .breadcrumb {
-    border-color: none;
+    padding: 0.5rem 15px;
+}
+
+a {
+    color: rgba(0,0,0,.5);
+}
+
+.breadcrumb-item.active {
+    color: rgba(0,0,0,.9);
+}
+
+.words {
+    font-family: 'EvolventaRegular', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0 0 auto;
+    font-size: 38px;
+    padding-top: 220px;
+    color: rgba(0,0,0,.7);
+    width: 50%;
 }
