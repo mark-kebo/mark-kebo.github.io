@@ -25,8 +25,22 @@
         font-weight: 800;
         color: rgba(42, 42, 42, 0.9);
     }
+    
+    .font-white-color {
+        color: white;
+    }
 
     .paddy {
         padding-top: 1rem;
     }
+    
+    .jum-why {
+        padding: 4rem 1rem 4rem 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .border-white-color-top-only {
+        border-top: 1px solid rgba(255, 255, 255, 0.31);
+    }    
 }
