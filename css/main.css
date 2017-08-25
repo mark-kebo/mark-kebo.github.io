@@ -1,3 +1,26 @@
+.text-js{
+  opacity: 0;
+}
+.cursor{
+  display: block;
+  position: absolute;
+  height: 50%;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  background-color: #414141;
+  z-index: 1;
+  animation: flash 0.5s none infinite alternate;
+}
+@keyframes flash{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
 body {
     font-family: 'EvolventaRegular', sans-serif;
     font-weight: normal;
@@ -130,10 +153,10 @@ a:hover {
 }
 
 .paddy {
-    padding-top: 5rem;
+    padding-top: 6rem;
 }
 
-.btn-primary {
+.btn-secondary {
     border-color: rgba(83, 83, 83, 0.7);
     border-radius: 50px;
     background: url(../img/backgr_grad.png);
@@ -146,7 +169,7 @@ a:hover {
     -moz-box-shadow: 0 0 10px rgba(83, 83, 83, 0.5);
     -webkit-box-shadow: 0 0 10px rgba(83, 83, 83, 0.5);
 }
-.btn-primary:hover {
+.btn-secondary:hover {
     border-color: rgba(206, 10, 255, 0.4);
 }
 
@@ -155,4 +178,9 @@ a:hover {
     font-size: 1.3rem;
     line-height: 1.5;
     font-weight: 800;
+}
+
+.btn-secondary:active {
+    background: url(../img/backgr_grad.png);
+    border-color: rgba(83, 83, 83, 0.7);
 }
