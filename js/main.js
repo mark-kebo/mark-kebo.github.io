@@ -1,5 +1,5 @@
 function setHeiHeight() {
-    $('.site-header').css({
+    $('.head').css({
         height: $(window).height() + 'px'
     });
 }
@@ -8,13 +8,13 @@ $(window).resize( setHeiHeight );
 
 $(window).scroll(function() {
 if ($(this).scrollTop() > 1){  
-    $('.fix-head').addClass("sticky");
-    $('.logo').addClass("sticky");
+    $('.fixed').addClass("sticky");
+    $('.logo-brand').addClass("sticky");
     $('.navbar-nav').addClass("sticky");
   }
   else{
-    $('.fix-head').removeClass("sticky");
-    $('.logo').removeClass("sticky");
+    $('.fixed').removeClass("sticky");
+    $('.logo-brand').removeClass("sticky");
     $('.navbar-nav').removeClass("sticky");
   }
 });

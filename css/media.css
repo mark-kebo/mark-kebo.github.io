@@ -1,0 +1,32 @@
+@media (max-width: 991px) {
+    .navbar-nav {
+        background-color: rgba(237, 237, 237, 0.9);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 50px rgba(237, 237, 237, 0.9);
+        -webkit-box-shadow: 50px rgba(237, 237, 237, 0.9);
+        -moz-box-shadow: 50px rgba(237, 237, 237, 0.9);
+        -o-box-shadow: 50px rgba(237, 237, 237, 0.9);
+    }
+}
+    
+@media (max-width: 600px) {
+    .jumbotron {
+        min-width: 300px;
+        max-width: 1300px;
+        margin: 0 auto;
+        background-color: rgba(0,0,0,0);
+        padding: 10rem 1rem 0rem 1rem;
+        text-align: center;
+    }
+
+    .display-3 {
+        font-size: 2rem;
+        font-weight: 800;
+        color: rgba(42, 42, 42, 0.9);
+    }
+
+    .paddy {
+        padding-top: 1rem;
+    }
+}
