@@ -202,3 +202,7 @@ a:hover {
 .img {
     padding-right: 20px;
 }
+
+.col-sm {
+    position: inherit;
+}
