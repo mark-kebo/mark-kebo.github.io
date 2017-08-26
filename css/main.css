@@ -37,7 +37,7 @@ body {
 
 .site-header {
     min-width: 300px;
-    max-width: 1300px;
+    max-width: 1150px;
     margin: 0 auto;
 }
 
@@ -112,7 +112,7 @@ a:hover {
 
 .jumbotron {
     min-width: 300px;
-    max-width: 1300px;
+    max-width: 1150px;
     margin: 0 auto;
     background-color: rgba(0,0,0,0);
     padding: 13rem 1rem 0rem 1rem;
@@ -120,7 +120,7 @@ a:hover {
 
 .rizer {
     min-width: 290px;
-    max-width: 620px;
+    max-width: 570px;
 }
 
 .display-3 {
