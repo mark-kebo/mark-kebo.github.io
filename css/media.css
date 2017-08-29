@@ -1,6 +1,6 @@
 @media (max-width: 991px) {
     .navbar-nav {
-        background-color: rgba(237, 237, 237, 0.9);
+        background-color: rgba(228, 228, 228, 0.7);
         padding: 20px;
         border-radius: 5px;
         box-shadow: 50px rgba(237, 237, 237, 0.9);
@@ -16,7 +16,6 @@
         max-width: 1150px;
         margin: 0 auto;
         background-color: rgba(0,0,0,0);
-        padding: 10rem 1rem 0rem 1rem;
         text-align: center;
     }
 
@@ -33,14 +32,26 @@
     .paddy {
         padding-top: 1rem;
     }
-    
-    .jum-why {
-        padding: 4rem 1rem 4rem 1rem;
-    }
 }
 
 @media (max-width: 575px) {
+    .img-why {
+        width: 75%;
+        padding-bottom: 2rem;
+    }
+    .img-alig {
+        text-align: center;
+    }
     .border-white-color-top-only {
         border-top: 1px solid rgba(255, 255, 255, 0.31);
-    }    
+    }
+    .first-why-sect {
+        text-align: center;
+    }
+    .border-purpur-color {
+        margin-left: auto;    
+    }
+    .border-white-color-min {
+        margin-left: auto;
+    }
 }

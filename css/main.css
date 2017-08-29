@@ -114,18 +114,20 @@ a:hover {
     max-width: 1150px;
     margin: 0 auto;
     background-color: rgba(0,0,0,0);
-    padding: 13rem 1rem 0rem 1rem;
+    padding: 0rem 1rem 0rem 1rem;
 }
 
 .rizer {
     min-width: 290px;
     max-width: 570px;
+    padding-top: 13rem;
 }
 
 .display-3 {
     font-size: 2.5rem;
     font-weight: 800;
     color: rgba(42, 42, 42, 0.9);
+    text-shadow: 1px 1px 2px #878787, 0 0 1em #8d8d8d;
 }
 
 .paddy {
@@ -212,4 +214,96 @@ a:hover {
 
 .mrg-r {
     margin-right: 1.5rem;
+}
+
+.text-walig {
+    text-align: justify;
+}
+
+.what-doing {
+    min-width: 300px;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 5rem 1rem 5rem 1rem;
+}
+
+.img-why {
+    width: 75%;
+}
+
+.first-why-sect {
+    font-size: 18px;
+}
+
+.frank {
+    font-family: 'Franklin', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px #878787, 0 0 1em #8d8d8d;
+}
+
+.muller {
+    font-family: 'EvolventaRegular', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.border-purpur-color {
+    border-top: 2px solid rgb(88, 0, 104);
+    width: 30px;
+    margin-left: 0px;
+    padding-bottom: 30px;
+}
+
+.text-our {
+    font-family: 'EvolventaRegular', sans-serif;
+    font-style: normal;
+    font-size: 17px;
+}
+
+.cont-hww {
+    min-width: 300px;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 5rem 1rem 5rem 1rem;
+    text-align: center;
+}
+
+.bwcm {
+    border-top: 2px solid rgb(255, 255, 255);
+    width: 30px;
+    margin-left: 0px;
+    margin-left: auto;
+}
+
+.color-black {
+    color: rgba(42, 42, 42, 0.9);
+}
+
+.border-white-color-min {
+    border-top: 2px solid rgb(255, 255, 255);
+    width: 30px;
+    margin-left: 0px;
+}
+
+.numbers {
+    border: 2px solid rgb(255, 255, 255);
+    padding: 20px;
+    margin: 100px 30px 30px 30px;
+
+}
+
+.numbers-only {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.numbers-wb {
+    font-family: 'GothamPro', sans-serif;
+    font-style: normal;
+    font-size: 130px;
+    margin-top: -8.8rem;
+    margin-bottom: -2rem;
+    text-shadow: 1px 1px 2px #878787, 0 0 1em #8d8d8d;    
 }
