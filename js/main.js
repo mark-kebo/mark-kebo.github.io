@@ -18,3 +18,26 @@ if ($(this).scrollTop() > 1){
     $('.navbar-nav').removeClass("sticky");
   }
 });
+
+
+
+function setEqualHeight(columns)
+    {
+    var tallestcolumn = 0;
+    columns.each(
+        function()
+        {
+            currentHeight = $(this).height();
+            if(currentHeight > tallestcolumn)
+            {
+                tallestcolumn = currentHeight;
+            }
+        }
+    );
+    columns.height(tallestcolumn);
+    }
+    $(document).ready(function() {
+        setEqualHeight($(".first-serv"));
+        setEqualHeight($(".second-serv"));
+    });
+

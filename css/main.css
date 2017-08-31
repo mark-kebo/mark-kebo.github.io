@@ -316,13 +316,15 @@ a:hover {
 }
 
 .img-serv {
-    height: 140px;
+    height: 130px;
 }
 
 .serv-cont {
-    padding: 35px 20px 35px 20px;
+    min-width: 333px;
+    max-width: 353px;
+    margin: 10px auto;
+    padding: 20px;
     background-color: rgba(245, 245, 245, 0.3);
-    margin: 15px;
     border: 1px solid rgba(218, 218, 218, 0.5);
     border-radius: 25px;
     -webkit-transition: all 0.4s ease;
@@ -368,7 +370,7 @@ a:hover {
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    margin-top: 2rem;
+    margin-top: 0.2rem;
 }
 .serv-cont:hover .btn-serv {
     color: #fff;
@@ -380,4 +382,49 @@ a:hover {
     color: rgba(42, 42, 42, 0.9);
     font-size: 16px;
     text-align: justify;
+    padding-top: 0.5rem;
+}
+
+.info-bar {
+    background: linear-gradient(to left, #5D306A, #656B91);
+}
+.info-cont {
+    min-width: 300px;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 5rem 1rem 5rem 1rem;
+    text-align: center;
+}
+.btn-inform {
+    color:  rgb(94, 56, 111);
+    background: #fff;
+    border: 1px solid rgba(107, 73, 152, 0.23);
+    box-shadow: 0 0 15px rgba(83, 83, 83, 0.3);
+    -o-box-shadow: 0 0 15px rgba(83, 83, 83, 0.3);
+    -moz-box-shadow: 0 0 15px rgba(83, 83, 83, 0.3);
+    -webkit-box-shadow: 0 0 15px rgba(83, 83, 83, 0.3);
+    padding: 10px 20px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    margin-top: 1.5rem;
+}
+
+.btn-inform:hover {
+    color: #fff;
+    background: #635985;
+    border-color: rgba(107, 73, 152, 0.23);
+}
+
+.btn-secondary.focus, .btn-secondary:focus {
+    box-shadow: 0 0 0 3px rgba(107, 73, 152, 0.23);
+}
+
+.portfolio {
+    min-width: 300px;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 5rem 1rem 5rem 1rem;
+    text-align: center;
 }
