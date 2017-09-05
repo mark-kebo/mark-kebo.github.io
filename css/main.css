@@ -639,7 +639,7 @@ a:hover {
 .md-content button {
 	display: block;
 	margin: 10px 0 0 auto;
-    width: 130px;
+    min-width: 130px;
     box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
     -o-box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
     -moz-box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
@@ -719,4 +719,12 @@ a:hover {
 
 .nav .nav-tabs .tab-brif, .md-content > div ul {
     padding: 0;
+}
+
+a:not([href]):not([tabindex]) {
+    color: rgba(83, 83, 83, 0.4);
+    border: none;
+}
+a:not([href]):not([tabindex]):hover {
+    color: #fff;
 }
