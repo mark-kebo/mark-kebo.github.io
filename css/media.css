@@ -66,3 +66,19 @@
         margin: 15px auto;
     }
 }
+
+@media (max-width: 679px) {
+    .mini-size-footer {
+        min-width: 300px;
+        text-align: center;
+        padding: 15px;
+        margin: 0 auto;
+    }
+    .border-left {
+        border-left: 1.5px solid rgba(255, 255, 255, 0);
+        text-align: center;
+    }
+    .img-al-footer {
+        text-align: center;
+    }
+}
