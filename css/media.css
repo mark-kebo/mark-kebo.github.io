@@ -59,3 +59,10 @@
     display: inline-block;
     }
 }
+
+@media (max-width: 382px) {
+    .box-port {
+        min-width: 300px;
+        margin: 15px auto;
+    }
+}

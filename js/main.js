@@ -196,3 +196,16 @@ function setEqualHeight(columns)
     .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
 
 }(jQuery);
+
+
+  // scroll
+
+jQuery(document).ready(function() {
+  jQuery("a.scrollto").click(function () {
+      headerHeight = 91;  
+      elementClick = jQuery(this).attr("href")
+      destination = jQuery(elementClick).offset().top - headerHeight;
+      jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1100);
+      return false;
+  });
+});

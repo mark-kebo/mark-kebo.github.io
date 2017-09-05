@@ -663,3 +663,25 @@ a:hover {
 	transform: scale(1);
 	opacity: 1;
 }
+
+.site-footer {
+    background-color: #424242;
+    font-size: 14px;
+}
+.footer-cont {
+    min-width: 300px;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+.img-foot {
+    width: 110px;
+}
+.border-left {
+    border-left: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+.ico-foot{
+    width: 20px;
+    margin-right: 20px;
+    padding: 13px 0px;
+}

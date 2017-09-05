@@ -13,52 +13,21 @@
     </head>
     
     <body>
-		<div class="wrap-site">
-            <div class="md-modal md-effect-1" id="modal-1">
-                <div class="md-content">
-                                <h3>Свяжитесь с нами!</h3>
-                                <div>
-                                    <p>This is a modal window. You can do the following things with it:</p>
-                                    <form method="POST" action="http://formspree.io/dimon1greenpis@mail.ru">
-                                        <input name="email" placeholder="email" type="email">
-                                        <textarea name="msg" placeholder="msg"></textarea>
-                                        <button type="submit">send</button>
-                                    </form>
-                                    <button class="md-close">Close me!</button>
-                                </div>
-                            </div>
-            </div>
-            <div class="md-modal md-effect-1" id="modal-2">
-                <div class="md-content">
-                    <h3>Оформление заказа</h3>
-                    <div>
-                        <p>This is a modal window. You can do the following things with it:</p>
-                        <form method="POST" action="http://formspree.io/dimon1greenpis@mail.ru">
-                            <input name="email" placeholder="email" type="email">
-                            <textarea name="msg" placeholder="msg"></textarea>
-                            <button type="submit">send</button>
-                        </form>
-                        <button class="md-close">Close me!</button>
-                    </div>
-                </div>
-            </div>
-            <div class="md-overlay"></div><!-- the overlay element --> 
-            
-            <div class="head">
+        <div class="head">
                 <div class="fixed">
                     <header class="site-header">
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <a href="#"><img class="logo navbar-brand logo-brand" src="img/logo-head.png" alt="Разработка сайтов, мобильных приложений и дизайна"></a>
+                            <a class="scrollto" href="#"><img class="logo navbar-brand logo-brand" src="img/logo-head.png" alt="Разработка сайтов, мобильных приложений и дизайна"></a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarText">
                                 <div class="navbar-nav">
-                                    <a class="nav-item nav-link mrg-r" href="#">О Hас<span class="sr-only">(current)</span></a>
-                                    <a class="nav-item nav-link mrg-r" href="#">Виды услуг</a>
-                                    <a class="nav-item nav-link mrg-r" href="#">Портфолио</a>
-                                    <a class="nav-item nav-link" href="#">Контакты</a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a class="nav-item nav-link mrg-r scrollto" href="#first">О Hас</a>
+                                    <a class="nav-item nav-link mrg-r scrollto" href="#second">Порядок работы</a>
+                                    <a class="nav-item nav-link mrg-r scrollto" href="#third">Виды услуг</a>
+                                    <a class="nav-item nav-link mrg-r scrollto" href="#fourth">Портфолио</a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <nav class="breadcrumb">
                                         <span class="breadcrumb-item active">Ru</span>
                                         <a class="breadcrumb-item" href="#">En</a>
@@ -79,9 +48,9 @@
                     </div>
                 </div>
             </div>
-        
+		<div class="wrap-site">
             <div class="site-content">
-                <div class="whywe">
+                <div class="whywe" id="first">
                     <div class="jumbotron jumbotron-fluid jum-why">
                         <div class="container">
                             <div class="row">
@@ -146,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="whywe">
+                <div class="whywe" id="second">
                     <div class="cont-hww">
                         <h1 class="display-3 font-white-color frank black-shadows">КАК МЫ РАБОТАЕМ?</h1>
                         <p class="muller font-white-color">Mы воплотим в реальность любые Ваши идеи! Note that depending on how they are used, badges may be confusing.</p>
@@ -175,7 +144,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="services">
+                <div class="services" id="third">
                     <h1 class="display-3 frank white-shadows color-black">ВИДЫ НАШИХ УСЛУГ</h1>
                     <p class="muller color-black">Mы воплотим в реальность любые Ваши идеи! Note that depending on how they are used, badges may be confusing.</p>
                     <hr class="my-4 border-purpur-color bpc">
@@ -184,19 +153,19 @@
                             <img class="img-serv" src="img/site.png" alt="Разработка сайтов, мобильных приложений и дизайна">
                             <p class="first-serv">Разработка сайтов</p>
                             <p class="second-serv">Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provisented with the content of the badge.</p>
-                            <a class="btn btn-secondary btn-serv" href="#" role="button">Подробнее</a>     
+                            <a class="btn btn-secondary btn-serv md-trigger" data-modal="modal-services-1">Подробнее</a>     
                         </div>
                         <div class="col-sm serv-cont">
                             <img class="img-serv" src="img/design.png" alt="Разработка сайтов, мобильных приложений и дизайна">
                             <p class="first-serv">Дизайн</p>
                             <p class="second-serv">Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provi esg gsegasg</p>
-                            <a class="btn btn-secondary btn-serv" href="#" role="button">Подробнее</a>  
+                            <a class="btn btn-secondary btn-serv md-trigger" data-modal="modal-services-2">Подробнее</a>  
                         </div>
                         <div class="col-sm serv-cont">
                             <img class="img-serv" src="img/mobile.png" alt="Разработка сайтов, мобильных приложений и дизайна">
                             <p class="first-serv">Разработка мобильных приложений</p>
                             <p class="second-serv">Note that depending on how they are used, badges may be confusing for users of screen readers. While the styling of badges provides a visual cue as to their purpose.</p>
-                            <a class="btn btn-secondary btn-serv" href="#" role="button">Подробнее</a>  
+                            <a class="btn btn-secondary btn-serv md-trigger" data-modal="modal-services-3">Подробнее</a>  
                         </div>
                     </div>
                 </div>
@@ -207,9 +176,8 @@
                         <hr class="my-4 bwcm">
                         <button class="btn btn-secondary btn-inform md-trigger" data-modal="modal-1">Связаться с Нами</button> 
                     </div>
-                    <div class="md-overlay"></div><!-- the overlay element --> 
                 </div>
-                <div class="portfolio">
+                <div class="portfolio" id="fourth">
                     <h1 class="display-3 frank white-shadows color-black">НАШИ ПОСЛЕДНИЕ ПРОЕКТЫ</h1>
                     <p class="muller color-black">Mы воплотим в реальность любые Ваши идеи!<br> Note that depending on how they are used, badges may be confusing.</p>
                     <hr class="my-4 border-purpur-color bpc">
@@ -231,44 +199,44 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="tab1" role="tabpanel">
                                 <div class="row">
-                                    <div class="col-sm box-port">
+                                    <div class="col-sm box-port md-trigger" data-modal="modal-portfol-1">
                                         <div class="backgr-act-col">
-                                            <img class="img-portfol" src="img/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
+                                            <img class="img-portfol" src="img/portfolio/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
                                         </div>
                                         <div class="bord-st"></div>
                                         <p class="portfol-text color-black">Note that depending on how.</p>
                                     </div>
-                                    <div class="col-sm box-port">
+                                    <div class="col-sm box-port md-trigger" data-modal="modal-portfol-2">
                                         <div class="backgr-act-col">
-                                            <img class="img-portfol" src="img/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
+                                            <img class="img-portfol" src="img/portfolio/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
                                         </div>
                                         <div class="bord-st"></div>
                                         <p class="portfol-text color-black">Note that depending on how.afafafafafa</p>
                                     </div>
-                                    <div class="col-sm box-port">
+                                    <div class="col-sm box-port md-trigger" data-modal="modal-portfol-3">
                                         <div class="backgr-act-col">
-                                            <img class="img-portfol" src="img/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
+                                            <img class="img-portfol" src="img/portfolio/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
                                         </div>
                                         <div class="bord-st"></div>
                                         <p class="portfol-text color-black">Note that depending on how.</p>
                                     </div>
-                                    <div class="col-sm box-port">
+                                    <div class="col-sm box-port md-trigger" data-modal="modal-portfol-4">
                                         <div class="backgr-act-col">
-                                            <img class="img-portfol" src="img/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
+                                            <img class="img-portfol" src="img/portfolio/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
                                         </div>
                                         <div class="bord-st"></div>
                                         <p class="portfol-text color-black">Note that depending on how.ssssssssssssssssssss</p>
                                     </div>
-                                    <div class="col-sm box-port">
+                                    <div class="col-sm box-port md-trigger" data-modal="modal-portfol-5">
                                         <div class="backgr-act-col">
-                                            <img class="img-portfol" src="img/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
+                                            <img class="img-portfol" src="img/portfolio/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
                                         </div>
                                         <div class="bord-st"></div>
                                         <p class="portfol-text color-black">Note that depending on how.</p>
                                     </div>
-                                    <div class="col-sm box-port">
+                                    <div class="col-sm box-port md-trigger" data-modal="modal-portfol-6">
                                         <div class="backgr-act-col">
-                                            <img class="img-portfol" src="img/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
+                                            <img class="img-portfol" src="img/portfolio/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
                                         </div>
                                         <div class="bord-st"></div>
                                         <p class="portfol-text color-black">Note that depending on how.</p>
@@ -287,17 +255,165 @@
                         </div>   
                     </div>
                 </div>
-            </div>
-            
-            <footer class="site-footer">
+            </div>    
+            <footer class="site-footer font-white-color muller">
+                <div class="row footer-cont">
+                    <div class="col">
+                        <img class="img-foot" src="img/logo-footer.png">
+                    </div>
+                    <div class="col-6">
+                        Студия разработки сайтов, мобильных приложений<br> и дизайна.
+                        <br><br>
+                        Ворожбицкий Д.В.
+                    </div>
+                    <div class="col border-left">
+                        <img class="ico-foot" src="img/mail.png">
+                        arolij.corp@gmail.com<br>
+                        <img class="ico-foot" src="img/phone.png">
+                        +375-29-993-3810
+                    </div>
+                </div>
             </footer>
+            
+            <div class="md-modal md-effect-1" id="modal-1">
+                <div class="md-content">
+                                <h3>Свяжитесь с нами!</h3>
+                                <div>
+                                    <p>This is a modal window. You can do the following things with it:</p>
+                                    <form method="POST" action="http://formspree.io/dimon1greenpis@mail.ru">
+                                        <input name="email" placeholder="email" type="email">
+                                        <textarea name="msg" placeholder="msg"></textarea>
+                                        <button type="submit">send</button>
+                                    </form>
+                                    <button class="md-close">Close me!</button>
+                                </div>
+                            </div>
+            </div>
+            <div class="md-modal md-effect-1" id="modal-2">
+                <div class="md-content">
+                    <h3>Оформление заказа</h3>
+                    <div>
+                        <p>This is a modal window. You can do the following things with it:</p>
+                        <form method="POST" action="http://formspree.io/dimon1greenpis@mail.ru">
+                            <input name="email" placeholder="email" type="email">
+                            <textarea name="msg" placeholder="msg"></textarea>
+                            <button type="submit">send</button>
+                        </form>
+                        <button class="md-close">Close me!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="md-modal md-effect-1" id="modal-services-1">
+                <div class="md-content">
+                    <h3>Оформление заказа</h3>
+                    <div>
+                        <p>This is a modal window. You can do the following things with it:</p>
+                        <form method="POST" action="http://formspree.io/dimon1greenpis@mail.ru">
+                            <input name="email" placeholder="email" type="email">
+                            <textarea name="msg" placeholder="msg"></textarea>
+                            <button type="submit">send</button>
+                        </form>
+                        <button class="md-close">Close me!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="md-modal md-effect-1" id="modal-services-2">
+                <div class="md-content">
+                    <h3>Оформление заказа</h3>
+                    <div>
+                        <p>This is a modal window. You can do the following things with it:</p>
+                        <form method="POST" action="http://formspree.io/dimon1greenpis@mail.ru">
+                            <input name="email" placeholder="email" type="email">
+                            <textarea name="msg" placeholder="msg"></textarea>
+                            <button type="submit">send</button>
+                        </form>
+                        <button class="md-close">Close me!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="md-modal md-effect-1" id="modal-services-3">
+                <div class="md-content">
+                    <h3>Оформление заказа</h3>
+                    <div>
+                        <p>This is a modal window. You can do the following things with it:</p>
+                        <form method="POST" action="http://formspree.io/dimon1greenpis@mail.ru">
+                            <input name="email" placeholder="email" type="email">
+                            <textarea name="msg" placeholder="msg"></textarea>
+                            <button type="submit">send</button>
+                        </form>
+                        <button class="md-close">Close me!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="md-modal md-effect-1" id="modal-portfol-1">
+                <div class="md-content">
+                    <h3>Дизайн и разработка сайта школы</h3>
+                    <div>
+                        <p>This is a modal window. You can do the following things with it:</p>
+                        <img class="img-portfol" src="img/portfolio/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
+                        <button class="md-close">Close me!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="md-modal md-effect-1" id="modal-portfol-2">
+                <div class="md-content">
+                    <h3>Дизайн и разработка сайта школы</h3>
+                    <div>
+                        <p>This is a modal window. You can do the following things with it:</p>
+                        <img class="img-portfol" src="img/portfolio/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
+                        <button class="md-close">Close me!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="md-modal md-effect-1" id="modal-portfol-3">
+                <div class="md-content">
+                    <h3>Дизайн и разработка сайта школы</h3>
+                    <div>
+                        <p>This is a modal window. You can do the following things with it:</p>
+                        <img class="img-portfol" src="img/portfolio/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
+                        <button class="md-close">Close me!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="md-modal md-effect-1" id="modal-portfol-4">
+                <div class="md-content">
+                    <h3>Дизайн и разработка сайта школы</h3>
+                    <div>
+                        <p>This is a modal window. You can do the following things with it:</p>
+                        <img class="img-portfol" src="img/portfolio/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
+                        <button class="md-close">Close me!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="md-modal md-effect-1" id="modal-portfol-5">
+                <div class="md-content">
+                    <h3>Дизайн и разработка сайта школы</h3>
+                    <div>
+                        <p>This is a modal window. You can do the following things with it:</p>
+                        <img class="img-portfol" src="img/portfolio/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
+                        <button class="md-close">Close me!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="md-modal md-effect-1" id="modal-portfol-6">
+                <div class="md-content">
+                    <h3>Дизайн и разработка сайта школы</h3>
+                    <div>
+                        <p>This is a modal window. You can do the following things with it:</p>
+                        <img class="img-portfol" src="img/portfolio/port-1.png" alt="Разработка сайтов, мобильных приложений и дизайна">
+                        <button class="md-close">Close me!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="md-overlay"></div>
         </div>
-        <script src="js/classie.js"></script>
-		<script src="js/modalEffects.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/wow.min.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+        <script src="js/classie.js"></script>
+		<script src="js/modalEffects.js"></script>
         <script>
             new WOW().init();
         </script>
