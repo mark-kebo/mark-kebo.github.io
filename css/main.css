@@ -597,8 +597,8 @@ a:hover {
 
 /* Content styles */
 .md-content {
-	color: #fff;
-	background: #625180;
+    color: #212020;
+    background: #fff;
 	position: relative;
 	border-radius: 3px;
 	margin: 0 auto;
@@ -638,8 +638,12 @@ a:hover {
 
 .md-content button {
 	display: block;
-	margin: 0 auto;
-	font-size: 0.8em;
+	margin: 10px 0 0 auto;
+    width: 130px;
+    box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
+    -o-box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
+    -moz-box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
+    -webkit-box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
 }
 
 /* Individual modal styles with animations/transitions */
@@ -684,4 +688,35 @@ a:hover {
     width: 20px;
     margin-right: 20px;
     padding: 13px 0px;
+}
+.form-al {
+    text-align: center;
+}
+.message-form {
+    width: 100%;
+    min-height: 150px;
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
+    -o-box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
+    -moz-box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
+    -webkit-box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
+}
+
+.email-form {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
+    -o-box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
+    -moz-box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
+    -webkit-box-shadow: 0 0 10px rgba(83, 83, 83, 0.4);
+}
+
+.nav .nav-tabs .tab-brif, .md-content > div ul {
+    padding: 0;
 }
