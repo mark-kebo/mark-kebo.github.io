@@ -321,8 +321,8 @@ a:hover {
 }
 
 .serv-cont {
-    min-width: 333px;
-    max-width: 353px;
+    min-width: 325px;
+    max-width: 345px;
     margin: 10px auto;
     padding: 20px;
     background-color: rgba(245, 245, 245, 0.3);
@@ -361,7 +361,7 @@ a:hover {
 .btn-serv {
     color:  rgba(83, 83, 83, 0.4);
     background: #fff;
-    border: 1px solid #c2c2c233;
+    border: 1px solid rgba(83, 83, 83, 0.2);
     box-shadow: 0 0 15px rgba(83, 83, 83, 0.3);
     -o-box-shadow: 0 0 15px rgba(83, 83, 83, 0.3);
     -moz-box-shadow: 0 0 15px rgba(83, 83, 83, 0.3);
@@ -500,7 +500,7 @@ a:hover {
 
 
 .bord-st {
-    width: 22px;
+    width: 0px;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-bottom: 20px solid #fcfcfc;
@@ -608,7 +608,6 @@ a:hover {
 	margin: 0;
 	padding: 0.4em;
 	text-align: center;
-	font-size: 2.4em;
 	font-weight: 300;
 	opacity: 0.8;
 	background: rgba(0,0,0,0.1);
@@ -727,4 +726,20 @@ a:not([href]):not([tabindex]) {
 }
 a:not([href]):not([tabindex]):hover {
     color: #fff;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.info-bar a {
+    color: white;
+}
+
+.info-bar h5 {
+    font-size: 18px;
+}
+
+.desa:hover {
+    color: none;
+    box-shadow: none;
 }
