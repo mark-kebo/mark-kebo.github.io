@@ -317,7 +317,7 @@ a:hover {
 }
 
 .img-serv {
-    height: 130px;
+    height: 150px;
 }
 
 .serv-cont {
@@ -530,7 +530,7 @@ a:hover {
 }
 
 .box-port:hover .backgr-act-col {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
