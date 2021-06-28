@@ -216,28 +216,27 @@
 		}
 	</style>
 
-	<script src="html2pdf.bundle.min.js"></script>
+	<!-- <script src="html2canvas.js"></script> -->
+	<script src="html2canvas.min.js"></script>
+	<script src="pdfmake.min.js"></script>
+	<!-- <script src="pdfmake.js"></script> -->
 </head>
 
 <body class="lang-en ">
 <script>
 	function generatePDF() {
-		var opt = {
-  		margin:       0.3,
-			pagebreak:		{mode: ['css', 'legacy']},
-			enableLinks:  true,
-  		filename:     'DmitryVorozhbicki-CV.pdf',
-  		image:        { type: 'jpeg', quality: 0.3 },
-  		html2canvas:  { scale: 4, windowWidth: 1024 },
-  		jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-		};
-		// Choose the element that our invoice is rendered in.
-		const element = document.getElementById("main");
-		// Choose the element and save the PDF for our user.
-		html2pdf()
-			.set(opt)
-			.from(element)
-			.save();
+		html2canvas(document.getElementById('main'), {
+				 onrendered: function (canvas) {
+						 var data = canvas.toDataURL();
+						 var docDefinition = {
+								 content: [{
+										 image: data,
+										 width: 800,
+								 }]
+						 };
+						 pdfMake.createPdf(docDefinition).download("Score_Details.pdf");
+				 }
+		 });
 	}
 </script>
 
