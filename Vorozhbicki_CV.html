@@ -53,10 +53,23 @@
 			clear: both;
 		}
 
+		.button {
+  		background-color: #4CAF50; /* Green */
+  		border: none;
+  		color: white;
+  		padding: 15px 32px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+  		font-size: 16px;
+  		margin: 16px 16px;
+  		cursor: pointer;
+		}
+
 		#main {
 			background: #fff;
-			width: 900px;
-			padding: 35px;
+			width: 700px;
+			padding: 30px;
 			margin: 0 auto 15px auto;
 			overflow: hidden;
 
@@ -202,22 +215,47 @@
 			}
 		}
 	</style>
+
+	<script src="html2pdf.bundle.min.js"></script>
 </head>
+
 <body class="lang-en ">
+<script>
+	function generatePDF() {
+		var opt = {
+  		margin:       0.3,
+			pagebreak:		{mode: ['css', 'legacy']},
+			enableLinks:  true,
+  		filename:     'DmitryVorozhbicki-CV.pdf',
+  		image:        { type: 'jpeg', quality: 0.3 },
+  		html2canvas:  { scale: 4 },
+  		jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+		};
+		// Choose the element that our invoice is rendered in.
+		const element = document.getElementById("main");
+		// Choose the element and save the PDF for our user.
+		html2pdf()
+			.set(opt)
+			.from(element)
+			.save();
+	}
+</script>
+
+<button onclick="generatePDF()", class="button">Download as PDF</button>
 
 <div id="main">
 		<div id="photo">
-			<img src="http://files1.cvmkr.com/0a9d8c_4194341_12273816.jpg" alt="" />
+			<img src="cv_image.jpg" alt="" />
 		</div>
 		<div class="header photo">
-		<h1 id="title">Dmitry Vorozhbicki<br><h2>iOS Developer</h2></h1>
+		<h1 id="title">Dmitry Vorozhbicki<br><h2>Mobile Applications Developer (iOS, Flutter)</h2></h1>
 	<div class="basic-info section">
 		<div class="set">
 						<div class="r">
 									<p class="email"><label>E-mail<span class="colon">:</span></label> <span class="value"><a href="mailto:arolij.corp@gmail.com" rel="nofollow">arolij.corp@gmail.com</a></span></p>
 									<p class="phone"><label>Phone<span class="colon">:</span></label> <span class="value"><a href="tel:48578280072" rel="nofollow">+48578280072</a></span></p>
 									<p class="website"><label>Website<span class="colon">:</span></label> <span class="value"><a href="https://mark-kebo.github.io" rel="nofollow">mark-kebo.github.io</a></span></p>
-									<p class="website"><label>LinkedIn<span class="colon">:</span></label> <span class="value"><a href="https://www.linkedin.com/in/dmitry-vorozhbitsky-7587aa166" rel="nofollow">linkedin.com/in/dmitry-vorozhbitsky</a></span></p>
+									<p class="website"><label>LinkedIn<span class="colon">:</span></label> <span class="value"><a href="https://www.linkedin.com/in/dmitry-vorozhbicki-7587aa166" rel="nofollow">linkedin.com/in/dmitry-vorozhbitsky</a></span></p>
 									<p class="website"><label>GitHub<span class="colon">:</span></label> <span class="value"><a href="http://github.com/mark-kebo" rel="nofollow">github.com/mark-kebo</a></span></p>
 						</div>
 		</div><!-- set //-->
@@ -231,7 +269,7 @@
 			<h2 class="title">About</h2>
 			<div class="set">
 							<div class="item">
-								<span class="info"><div>- I’m iOS Developer with more than 3-year experience and focusing on native iOS development using Swift and Objective-C languages;</div><div>- Also I am responsive and flexible during implementation processes, understand principals around app UXExperienced of working on iOS platform and frameworks and customizing it as per requirements;</div><div>- I have an ability to deliver complete user stories independently with high usability and quality;</div><div>- Strong communication skills, both verbal and written, with strong relationship, collaborative and organization skills;</div><div>- Strong organizational skills with the ability to work on multiple projects within tight timelines.</div></span>
+								<span class="info"><div>- I’m iOS Developer with more than 3-year experience and focusing on native iOS development using Swift and Objective-C languages;</div><div>- Also I am responsive and flexible during implementation processes, understand principals around app UXExperienced of working on iOS platform and frameworks and customizing it as per requirements;</div><div>- I have an ability to deliver complete user stories independently with high usability and quality;</div><div>- Strong communication skills, both verbal and written, with strong relationship, collaborative and organization skills;</div><div>- Strong organizational skills with the ability to work on multiple projects within tight timelines.</div><div>- Experience in working on cross-platform projects (Flutter).</div></span>
 							</div>
 						</div>
 			<div class="clear"> </div>
@@ -240,7 +278,7 @@
 			<h2 class="title">SKILLS</h2>
 			<div class="set">
 							<div class="item">
-								<span class="info"><div>iOS Development, Swift, Objective-C, GCD, CocoaPods, UIKit, SwiftUI, SpriteKit, SceneKit, Foundation, Realm, CoreData, Xcode instruments, MVC, IOS SDK, OOP, Git(Gitflow), Sketch, Flinto, Postman, Jira, Confluence.</div></span>
+								<span class="info"><div>iOS Development, Swift, Objective-C, GCD, CocoaPods, UIKit, SwiftUI, SpriteKit, SceneKit, Foundation, Realm, CoreData, Xcode instruments, MVC, MVVM, IOS SDK, OOP, Flutter, Dart, Git(Gitflow), Sketch, Flinto, Postman, Jira, Confluence, Figma.</div></span>
 							</div>
 						</div>
 			<div class="clear"> </div>
@@ -254,7 +292,7 @@
 						<span class="date r">November 2020 &mdash; Present</span>
 						</h3>
 						<div class="clear"> </div>
-						<span class="job_title">iOS Developer</span><div class="info"><div><div><span style="font-weight:bold;">Project:</span></div><div><ul><li> <span style="font-style:italic;font-weight:bold;">iMKA</span> is an app similar to skycash or mobilet. <br><i>Features</i>: purchase of one-time and periodic tickets, purchase of event tickets, profiling/users, ticket purchase mode in CICO, integration with devices in vehicles - alt beacon, payment processing, parking fees. <br><i>Responsibilities</i>: bug fixing, Creating UI, Develop Custom components, Adding new functionality to existed project, Code review; <br><i>Environment</i>: Xcode, Confluence, Jira, Swift, GCD, CocoaPods, UIKit, Foundation, Realm, Xcode instruments, MVVM, Design patterns, Git(Gitflow), Unit tests, GoogleMaps, URLSession.</li></ul></div></div><div><br /></div></div><div class="clear"> </div>
+						<span class="job_title">iOS Developer</span><div class="info"><div><div><span style="font-weight:bold;">Project:</span></div><div><ul><li> <span style="font-style:italic;font-weight:bold;">iMKA 2</span> is an app similar to skycash or mobilet. <br><i>Features</i>: purchase of one-time and periodic tickets, purchase of event tickets, profiling/users, ticket purchase mode in CICO, integration with devices in vehicles - alt beacon, payment processing, parking fees. <br><i>Responsibilities</i>: bug fixing, Creating UI, Develop Custom components, Adding new functionality to existed project, Code review; <br><i>Environment</i>: Xcode, Confluence, Jira, Swift, GCD, CocoaPods, UIKit, Foundation, Realm, Xcode instruments, MVVM, Design patterns, Git(Gitflow), Unit tests, GoogleMaps, URLSession.</li></ul></div></div><div><br /></div></div><div class="clear"> </div>
 						</div>
 
 						<div class="item">
@@ -270,7 +308,7 @@
 							<span class="date r">January 2020 &mdash; October 2020</span>
 								</h3>
 								<div class="clear"> </div>
-								<span class="job_title">iOS Developer</span><div class="info"><div><div><span style="font-weight:bold;">Project:</span></div><div><ul><li><span style="font-style:italic;font-weight:bold;"><a href="https://modivo.pl" rel="nofollow">Modivo</a></span> - Online clothing store. <br><i>Responsibilities</i>: bug fixing, Change UI for certain screens, Develop Custom components, Adding new functionality to existed project; <br><i>Environment</i>: Xcode, Postman, Confluence, Jira, Swift, RxSwift, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, MVVM, Design patterns, Git(Gitflow).</li></ul></div></div><div><br /></div></div><div class="clear"> </div>
+								<span class="job_title">iOS Developer</span><div class="info"><div><div><span style="font-weight:bold;">Project:</span></div><div><ul><li><span style="font-style:italic;font-weight:bold;"><a href="https://apps.apple.com/pl/app/modivo/id1498122497" rel="nofollow">Modivo</a></span> - Online clothing store. <br><i>Responsibilities</i>: bug fixing, Change UI for certain screens, Develop Custom components, Adding new functionality to existed project; <br><i>Environment</i>: Xcode, Postman, Confluence, Jira, Swift, RxSwift, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, MVVM, Design patterns, Git(Gitflow).</li></ul></div></div><div><br /></div></div><div class="clear"> </div>
 								</div>
 
 								<div class="item">
@@ -278,7 +316,7 @@
 							<span class="date r">July 2018 &mdash; January 2020</span>
 								</h3>
 								<div class="clear"> </div>
-								<span class="job_title">iOS Developer</span><div class="info"><div><span style="font-weight:bold;">Projects</span>:</div><div><ul><li><span style="font-style:italic;font-weight:bold;"><a href="https://platform.chdekker.nl" rel="nofollow">CH-Dekker</a> </span>- truck damage recorder application. <br><i>Responsibilities</i>: bug fixing, Full app creating cycle, Develop Custom components, Adding new functionality to existed project, Implement API Module, Project mentoring; <br><i>Environment</i>: Xcode, Fabric, Trello, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, Realm, Xcode instruments, MVC, Design patterns, Git(Gitflow), Postman, Firebase.</li><li><span style="font-weight:bold;font-style:italic;">RPBemanningApp</span> – calendar viewer application. <br><i>Responsibilities</i>: Change UI for certain screens, Change API module functionality, Bugfixing; <br><i>Environment</i>: Xcode, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, VIPER, Design patterns, Git(Gitflow), Sketch, Postman, Firebase.</li><li><span style="font-style:italic;font-weight:bold;"><a href="https://www.zodiacrewards.com/en/business-tools/ion-pool-care" rel="nofollow">iON Pool Care</a></span> - offers you all the tools you need to keep your business organized and running smoothly. <br><i>Responsibilities</i>: Full app creating cycle, Implement API Module, Implement Data Store Module (Realm), Implement Custom Components, Create tasks, Redesign, Bugfixing, Code review, Project mentoring, Investigations for choosing app architecture; <br><i>Environment</i>: Xcode, Fabric, Redmine, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, Realm, Xcode instruments, MVC, Design patterns, Git(Gitflow), Sketch, Postman, Firebase.</li><li><span style="font-weight:bold;font-style:italic;">Bookaroo</span> – iPad application store children's books with the ability to voice and play them. <br><i>Responsibilities</i>: Adding new functionality to existed project, Bugfixing, Full app creating cycle, Implement API Module, Implement Custom Components, Animate elements, Audio playing and recording, Investigations for choosing app architecture; <br><i>Environment</i>: Xcode, Sketch, Flinto, Postman, Swift, Core Animations, AudioKit, GCD, CocoaPods, UIKit, Alamofire, Foundation, Xcode instruments, MVC, Design patterns, Git(Gitflow), Jira.</li><li><span style="font-weight:bold;font-style:italic;">Dog Tracker Mishiko </span>- Mishiko Collar. Your pet looked after. Track your dog’s GPS-coordinates and activity throught the day. The Mishiko Collar lowers this stat by giving your pet’s real-time coordinates with up to 4m accuracy. Involved in redesign work and also adding new functionality to existed project. <br><i>Responsibilities</i>: Implement Dogs Diagnostic flow and send data, Dog routing implementation, Work with GoogleMaps, Customize elements, Custom components Implementation, Adding new functionality to existed project, Bugfixing, Code review, Debug Libraries in Fabric; <br><i>Environment</i>: Xcode, Fabric, Zeplin, Redmine, Objective-C, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, MVC, Design patterns, Git(Gitflow), Flinto, Postman, Jira, Firebase.</li></ul></div></div><div class="clear"> </div>
+								<span class="job_title">iOS Developer</span><div class="info"><div><span style="font-weight:bold;">Projects</span>:</div><div><ul><li><span style="font-style:italic;font-weight:bold;"><a href="https://platform.chdekker.nl" rel="nofollow">CH-Dekker</a> </span>- truck damage recorder application. <br><i>Responsibilities</i>: bug fixing, Full app creating cycle, Develop Custom components, Adding new functionality to existed project, Implement API Module, Project mentoring; <br><i>Environment</i>: Xcode, Fabric, Trello, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, Realm, Xcode instruments, MVC, Design patterns, Git(Gitflow), Postman, Firebase.</li><li><span style="font-weight:bold;font-style:italic;">RPBemanningApp</span> – calendar viewer application. <br><i>Responsibilities</i>: Change UI for certain screens, Change API module functionality, Bugfixing; <br><i>Environment</i>: Xcode, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, VIPER, Design patterns, Git(Gitflow), Sketch, Postman, Firebase.</li><li><span style="font-style:italic;font-weight:bold;"><a href="https://www.zodiacrewards.com/en/business-tools/ion-pool-care" rel="nofollow">iON Pool Care</a></span> - offers you all the tools you need to keep your business organized and running smoothly. <br><i>Responsibilities</i>: Full app creating cycle, Implement API Module, Implement Data Store Module (Realm), Implement Custom Components, Create tasks, Redesign, Bugfixing, Code review, Project mentoring, Investigations for choosing app architecture; <br><i>Environment</i>: Xcode, Fabric, Redmine, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, Realm, Xcode instruments, MVC, Design patterns, Git(Gitflow), Sketch, Postman, Firebase.</li><li><span style="font-weight:bold;font-style:italic;"><a href="https://www.bookaroo.club/app-1" rel="nofollow">Bookaroo</a></span> – iPad application store children's books with the ability to voice and play them. <br><i>Responsibilities</i>: Adding new functionality to existed project, Bugfixing, Full app creating cycle, Implement API Module, Implement Custom Components, Animate elements, Audio playing and recording, Investigations for choosing app architecture; <br><i>Environment</i>: Xcode, Sketch, Flinto, Postman, Swift, Core Animations, AudioKit, GCD, CocoaPods, UIKit, Alamofire, Foundation, Xcode instruments, MVC, Design patterns, Git(Gitflow), Jira.</li><li><span style="font-weight:bold;font-style:italic;">Dog Tracker Mishiko </span>- Mishiko Collar. Your pet looked after. Track your dog’s GPS-coordinates and activity throught the day. The Mishiko Collar lowers this stat by giving your pet’s real-time coordinates with up to 4m accuracy. Involved in redesign work and also adding new functionality to existed project. <br><i>Responsibilities</i>: Implement Dogs Diagnostic flow and send data, Dog routing implementation, Work with GoogleMaps, Customize elements, Custom components Implementation, Adding new functionality to existed project, Bugfixing, Code review, Debug Libraries in Fabric; <br><i>Environment</i>: Xcode, Fabric, Zeplin, Redmine, Objective-C, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, MVC, Design patterns, Git(Gitflow), Flinto, Postman, Jira, Firebase.</li></ul></div></div><div class="clear"> </div>
 								</div>
 							</div>
 			<div class="clear"> </div>
@@ -287,7 +325,7 @@
 			<h2 class="title">MY PROJECTS</h2>
 			<div class="set">
 							<div class="item">
-								<span class="info"><div><ul><li><span style="font-weight:bold;font-style:italic;">Coupons <a href="https://github.com/mark-kebo/Coupons-iOS" rel="nofollow">iOS</a>, <a href="https://github.com/mark-kebo/Coupons-Android" rel="nofollow">Android</a></span> – application for sharing coupons with your friends and family. <br><i>Environment</i> : Xcode, AndroidStudio, Github, SwiftUI, Java, Gradle, CocoaPods, Alamofire, Foundation, Xcode instruments, MVC, Git(Gitflow), Postman, Firebase.</li><li><span style="font-style:italic;font-weight:bold;"><a href="https://github.com/mark-kebo/Snolight" rel="nofollow">Weather station</a></span>– IoT application that collects data from Arduino device with various sensors using Bluetooth to display change graphics and current information. <br><i>Environment</i> : AndroidStudio, Github, Java, Gradle, ArduinoStudio, C++, Git(Gitflow).</li><li><span style="font-weight:bold;font-style:italic;"><a href="https://github.com/mark-kebo/Mike-the-Bird" rel="nofollow">Mike the Bird</a></span> – Sprite Kit 2D game, in which the bird collects flowers and overcomes obstacles. <br><i>Environment</i> : Xcode, Github, Swift, GCD, CocoaPods, SpriteKit, Foundation, Xcode instruments, MVC, Design patterns, Git(Gitflow), Sketch.</li></ul></div></span>
+								<span class="info"><div><ul><li><span style="font-weight:bold;font-style:italic;">Coupons <a href="https://github.com/mark-kebo/Coupons-iOS" rel="nofollow">iOS</a>, <a href="https://github.com/mark-kebo/Coupons-Android" rel="nofollow">Android</a></span> – application for sharing coupons with your friends and family. <br><i>Environment</i> : Xcode, AndroidStudio, Github, SwiftUI, Java, Gradle, CocoaPods, Alamofire, Foundation, Xcode instruments, MVC, Git(Gitflow), Postman, Firebase.</li><li><span style="font-style:italic;font-weight:bold;"><a href="https://github.com/mark-kebo/Snolight" rel="nofollow">Weather station</a></span>– IoT application that collects data from Arduino device with various sensors using Bluetooth to display change graphics and current information. <br><i>Environment</i> : AndroidStudio, Github, Java, Gradle, ArduinoStudio, C++, Git(Gitflow).</li><li><span style="font-weight:bold;font-style:italic;"><a href="https://github.com/mark-kebo/Mike-the-Bird" rel="nofollow">Mike the Bird</a></span> – Sprite Kit 2D game, in which the bird collects flowers and overcomes obstacles. <br><i>Environment</i> : Xcode, Github, Swift, GCD, CocoaPods, SpriteKit, Foundation, Xcode instruments, MVC, Design patterns, Git(Gitflow), Sketch.</li></ul></div></span><span class="info"><div><ul><li><span style="font-weight:bold;font-style:italic;">Gaming Disorder Test PL <a href="https://github.com/mark-kebo/Gaming-Disorder-Test-Poland" rel="nofollow">Dashboard</a>, <a href="https://github.com/mark-kebo/Gaming-Disorder-Test-Poland-mobile" rel="nofollow">Mobile</a></span> – application for testing and checking test results to identify "Gaming Disorder". <br><i>Environment</i> : Visual Studio Code, Xcode, AndroidStudio, Github, Flutter, MVC, Git(Gitflow), Postman, Firebase.</li>
 							</div>
 						</div>
 			<div class="clear"> </div>
