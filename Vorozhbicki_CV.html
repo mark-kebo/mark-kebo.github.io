@@ -4,220 +4,9 @@
 	<title>Dmitry Vorozhbicki CV</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Generator" content="CV Maker - https://cvmkr.com/" />
-	<meta name='viewport'
-     		content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
-	<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
-	<style type="text/css">
-		body {
-			background: #f0f0f0;
-			margin: 0;
-			padding: 0;
-
-			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			line-height: 20px;
-			font-size: 13px;
-
-			color: #222;
-		}
-
-		h1, h2, h3, h4 {
-			font-family: 'Oswald', Impact, Helvetica, Arial, sans-serif;
-			font-weight: normal;
-			margin: 0 0 15px 0;
-			padding: 0;
-		}
-		h1 {
-			font-size: 300%;
-		}
-		h2 {
-			font-size: 210%;
-		}
-		h3 {
-			font-size: 130%;
-		}
-
-		p {
-			margin: 0 0 10px 0;
-		}
-
-		ul {
-			margin: 0;
-			list-style-type: square;
-		}
-		a {
-			color: #222;
-		}
-		/* ________________________________________________________ */
-		.rtl {
-			direction: rtl;
-		}
-		.clear {
-			clear: both;
-		}
-
-		.button {
-  		background-color: #4CAF50; /* Green */
-  		border: none;
-  		color: white;
-  		padding: 15px 32px;
-  		text-align: center;
-  		text-decoration: none;
-  		display: inline-block;
-  		font-size: 16px;
-  		margin: 16px 16px;
-  		cursor: pointer;
-		}
-
-		#main {
-			background: #fff;
-			width: 700px;
-			padding: 30px;
-			margin: 0 auto 15px auto;
-			overflow: hidden;
-
-			box-shadow: 0 0 6px #ccc;
-		}
-
-		#title {
-			line-height: 42px;
-			/*border-bottom: 3px solid #000;
-			padding-bottom: 30px;
-			margin: 0px 0 30px 0;*/
-		}
-
-		#credit {
-			margin-bottom: 20px;
-			font-size: 11px;
-			color: #999;
-			text-align: center;
-		}
-			#credit a {
-				color: #999;
-			}
-
-		p label {
-			font-family: 'Oswald', Helvetica, Arial, serif;
-
-			font-size: 110%;
-			margin-right: 10px;
-		}
-			p label span.colon {
-				display: inline;
-			}
-
-
-		.section {
-			margin-bottom: 40px;
-		}
-		.section .set {
-		}
-		.item {
-			margin: 0 0 20px 0;
-		}
-
-		/*  _____________________________ */
-		.section .title {
-			text-transform: uppercase;
-			font-size: 170%;
-
-			padding: 10px 10px;
-			margin: 0 auto 8px auto;
-
-			display: inline-block;
-			background: #000;
-			color: #fff;
-		}
-			.section .set h3 {
-				margin: 0;
-			}
-
-
-
-		.basic-info {
-			border-top: 0;
-		}
-		.section.basic-info .title {
-			float: left;
-			border: 0;
-		}
-		.basic-info .set {
-			float: right;
-			width: 70%;
-		}
-		.basic-info .address {
-			width: 40%;
-			float: left;
-		}
-		.basic-info .r {
-			float: right;
-			width: 60%;
-			text-align: right;
-		}
-			.basic-info label {
-				font-family: 'Oswald', Helvetica, Arial, serif;
-			}
-			.basic-info label, .basic-info span  {
-				display: inline !important;
-			}
-		.basic-info p {
-			margin: 0;
-		}
-
-		.section span.value {
-			display: block;
-		}
-		.section h3 span.l, .section span.r {
-			width: 49%;
-			float: left;
-		}
-			.section span.r {
-				float: right;
-				text-align: right;
-			}
-			.section-education .school,
-			.section-work .job_title {
-				font-size: 100%;
-				display: block;
-				margin: 5px 0 5px 0;
-			}
-
-
-		#photo {
-			width: 160px;
-			height: 200px;
-			overflow: hidden;
-			float: left;
-			margin-top: 4px;
-			border-radius: 4px;
-		}
-		#photo img {
-			width: 100%;
-			height: auto;
-		}
-		.header.photo {
-			margin-left: 190px;
-		}
-		.header.photo #title {
-			text-align: left;
-		}
-		.header.photo .basic-info {
-			float: none;
-			padding: 0;
-		}
-
-
-		@media screen and (max-width: 950px) {
-			body {
-				background: #fff;
-			}
-			#main {
-				box-shadow: none;
-				padding: 0;
-				padding: 5px;
-			}
-		}
-	</style>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main-cv.css" />
+	<link rel="stylesheet" href="assets/css/general.css" />
 	<script src="https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.auto.min.js"></script>
 	<script src="jspdf.min.js"></script>
 	<script src="html2canvas.min.js"></script>
@@ -232,7 +21,7 @@
 			filename:     'Vorozhbicki-CV.pdf',
 			pageBreak: { mode: 'css', after:'.break-page'},
 			image:        { type: 'jpeg', quality: 0.98 },
-			html2canvas:  { dpi: 192, letterRendering: true },
+			html2canvas:  { dpi: 192, letterRendering: true, windowWidth: 1024  },
 			jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
 		};
 		// Choose the element that our invoice is rendered in.
@@ -245,7 +34,13 @@
 	}
 </script>
 
-<button onclick="generatePDF()", class="button">Download as PDF</button>
+<section id="footer" class="split style2 special">
+	<footer class="download-cv">
+		<ul class="actions">
+			<button onclick="generatePDF()", class="button">Download as PDF</button>
+		</ul>
+	</footer>
+</section>
 
 <div id="main">
 	<style>.break-page {break-after: page;} .content {padding: 30px}</style>
@@ -253,22 +48,21 @@
 			<img src="cv_image.jpg" alt="" />
 		</div>
 		<div class="header photo">
-		<h1 id="title">Dmitry Vorozhbicki<br><h2>Mobile Applications Developer (iOS, Flutter)</h2></h1>
+		<h1 id="title">Dmitry Vorozhbicki<br></h1>
+		<h2>Mobile Applications Developer (iOS, Flutter)</h2>
 	<div class="basic-info section">
-		<div class="set">
-						<div class="r">
-									<p class="email"><label>E-mail<span class="colon">:</span></label> <span class="value"><a href="mailto:arolij.corp@gmail.com" rel="nofollow">arolij.corp@gmail.com</a></span></p>
-									<p class="phone"><label>Phone<span class="colon">:</span></label> <span class="value"><a href="tel:48578280072" rel="nofollow">+48578280072</a></span></p>
-									<p class="website"><label>Website<span class="colon">:</span></label> <span class="value"><a href="https://mark-kebo.github.io" rel="nofollow">mark-kebo.github.io</a></span></p>
-									<p class="website"><label>LinkedIn<span class="colon">:</span></label> <span class="value"><a href="https://www.linkedin.com/in/dmitry-vorozhbicki-7587aa166" rel="nofollow">linkedin.com/in/dmitry-vorozhbitsky</a></span></p>
-									<p class="website"><label>GitHub<span class="colon">:</span></label> <span class="value"><a href="http://github.com/mark-kebo" rel="nofollow">github.com/mark-kebo</a></span></p>
-						</div>
-		</div><!-- set //-->
+		<div class="r">
+					<p class="email"><label>E-mail<span class="colon">:</span></label> <span class="value"><a href="mailto:arolij.corp@gmail.com" rel="nofollow">arolij.corp@gmail.com</a></span></p>
+					<p class="phone"><label>Phone<span class="colon">:</span></label> <span class="value"><a href="tel:48578280072" rel="nofollow">+48578280072</a></span></p>
+					<p class="website"><label>Website<span class="colon">:</span></label> <span class="value"><a href="https://mark-kebo.github.io" rel="nofollow">mark-kebo.github.io</a></span></p>
+					<p class="website"><label>LinkedIn<span class="colon">:</span></label> <span class="value"><a href="https://www.linkedin.com/in/dmitry-vorozhbicki-7587aa166" rel="nofollow">linkedin.com/in/dmitry-vorozhbitsky</a></span></p>
+					<p class="website"><label>GitHub<span class="colon">:</span></label> <span class="value"><a href="http://github.com/mark-kebo" rel="nofollow">github.com/mark-kebo</a></span></p>
+		</div>
 		<div class="clear"> </div>
 	</div><!-- basic-info //-->
+	</div>
 
-			</div><div class="clear"> </div>
-
+			<div class="clear"> </div>
 
 			<div class="section section-1287593158087">
 			<h2 class="title">About</h2>
@@ -293,11 +87,11 @@
 			<div class="set">
 
 						<div class="item">
-						<h3><span class="company l">ELTE GPS Group, Kraków</span>
-						<span class="date r">November 2020 &mdash; Present</span>
-						</h3>
+							<span class="company l">ELTE GPS Group, Kraków</span>
+							<span class="date r">November 2020 &mdash; Present</span>
 						<div class="clear"> </div>
-						<span class="job_title">iOS Developer</span><div class="info"><div>
+						<span class="job_title">iOS Developer</span>
+						<div class="info"><div>
 							<div>
 								<span style="font-weight:bold;">Project:</span>
 							</div>
@@ -317,12 +111,10 @@
 					</div>
 					<div class="clear"> </div>
 						</div>
-						<span class="break-page"></span>
-
+						<!-- <span class="break-page"></span> -->
 						<div class="item">
-						<h3><span class="company l">Freelance, self-employed</span>
-						<span class="date r">March 2020 &mdash; Present</span>
-						</h3>
+							<span class="company l">Freelance, self-employed</span>
+							<span class="date r">March 2020 &mdash; Present</span>
 						<div class="clear"> </div>
 						<span class="job_title">iOS Developer</span>
 						<div class="info">
@@ -352,21 +144,18 @@
 											 </ul>
 										 </div>
 									 </div>
-									 <div class="clear"> </div>
 						</div>
 
 							<div class="item">
-									<h3><span class="company l">Norbsoft | Mobile App Design &amp; Development, Kraków</span>
-							<span class="date r">January 2020 &mdash; October 2020</span>
-								</h3>
+								<span class="company l">Norbsoft | Mobile App Design &amp; Development, Kraków</span>
+								<span class="date r">January 2020 &mdash; October 2020</span>
 								<div class="clear"> </div>
 								<span class="job_title">iOS Developer</span><div class="info"><div><div><span style="font-weight:bold;">Project:</span></div><div><ul><li><span style="font-style:italic;font-weight:bold;"><a href="https://apps.apple.com/pl/app/modivo/id1498122497" rel="nofollow">Modivo</a></span> - Online clothing store. <br><i>Responsibilities</i>: bug fixing, Change UI for certain screens, Develop Custom components, Adding new functionality to existed project; <br><i>Environment</i>: Xcode, Postman, Confluence, Jira, Swift, RxSwift, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, MVVM, Design patterns, Git(Gitflow).</li></ul></div></div><div><br /></div></div><div class="clear"> </div>
-								</div>
+							</div>
 
 								<div class="item">
-									<h3><span class="company l">Cogniteq, Grodno</span>
-							<span class="date r">July 2018 &mdash; January 2020</span>
-								</h3>
+									<span class="company l">Cogniteq, Grodno</span>
+									<span class="date r">July 2018 &mdash; January 2020</span>
 								<div class="clear"> </div>
 								<span class="job_title">iOS Developer</span><div class="info"><div><span style="font-weight:bold;">Projects</span>:</div><div><ul><li><span style="font-style:italic;font-weight:bold;"><a href="https://platform.chdekker.nl" rel="nofollow">CH-Dekker</a> </span>- truck damage recorder application. <br><i>Responsibilities</i>: bug fixing, Full app creating cycle, Develop Custom components, Adding new functionality to existed project, Implement API Module, Project mentoring; <br><i>Environment</i>: Xcode, Fabric, Trello, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, Realm, Xcode instruments, MVC, Design patterns, Git(Gitflow), Postman, Firebase.</li><li><span style="font-weight:bold;font-style:italic;">RPBemanningApp</span> – calendar viewer application. <br><i>Responsibilities</i>: Change UI for certain screens, Change API module functionality, Bugfixing; <br><i>Environment</i>: Xcode, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, VIPER, Design patterns, Git(Gitflow), Sketch, Postman, Firebase.</li><li><span style="font-style:italic;font-weight:bold;"><a href="https://www.zodiacrewards.com/en/business-tools/ion-pool-care" rel="nofollow">iON Pool Care</a></span> - offers you all the tools you need to keep your business organized and running smoothly. <br><i>Responsibilities</i>: Full app creating cycle, Implement API Module, Implement Data Store Module (Realm), Implement Custom Components, Create tasks, Redesign, Bugfixing, Code review, Project mentoring, Investigations for choosing app architecture; <br><i>Environment</i>: Xcode, Fabric, Redmine, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, Realm, Xcode instruments, MVC, Design patterns, Git(Gitflow), Sketch, Postman, Firebase.</li>
 									<span class="break-page"></span>
@@ -388,17 +177,17 @@
 			<h2 class="title">Education</h2>
 			<div class="set">
 						<div class="item">
-							<h3><span class="course l">Engineer's degree</span>
-						<span class="date r">August 2014 &mdash; August 2019</span>
-							</h3>
+							<span class="company l">Engineer's degree</span>
+							<span class="date r">August 2014 &mdash; August 2019</span>
 							<div class="clear"> </div>
-							<span class="school">Yanka Kupala St. University of Grodno</span><div class="info">Physico-Technical Faculty, Information and measuring technology</div><span class="clear"> </span>
+							<span class="school">Yanka Kupala St. University of Grodno</span>
+							<div class="info">Physico-Technical Faculty, Information and measuring technology</div>
+							<span class="clear"></span>
 						</div>
 
 						<div class="item">
-							<h3><span class="course l">Master's degree</span>
-						<span class="date r">September 2019 &mdash; September 2021</span>
-							</h3>
+							<span class="company l">Master's degree</span>
+							<span class="date r">September 2019 &mdash; September 2021</span>
 							<div class="clear"> </div>
 							<span class="school">Jagiellonian University Cracow</span><div class="info">Computer Games and Programming Skills</div><span class="clear"> </span>
 						</div>
