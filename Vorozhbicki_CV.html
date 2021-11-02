@@ -228,7 +228,7 @@
 		var opt = {
 			margin:       0.3,
 			filename:     'Vorozhbicki-CV.pdf',
-			pagebreak:    { before: '.beforeClass', after: ['#after1', '#after2'], avoid: 'img' },
+			pageBreak: { mode: 'css', after:'.break-page'},
 			image:        { type: 'jpeg', quality: 0.98 },
 			html2canvas:  { dpi: 192, letterRendering: true },
 			jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
@@ -246,6 +246,7 @@
 <button onclick="generatePDF()", class="button">Download as PDF</button>
 
 <div id="main">
+	<style>.break-page {break-after: page;} .content {padding: 30px}</style>
 		<div id="photo">
 			<img src="cv_image.jpg" alt="" />
 		</div>
@@ -271,7 +272,7 @@
 			<h2 class="title">About</h2>
 			<div class="set">
 							<div class="item">
-								<span class="info"><div>- I’m iOS Developer with more than 3-year experience and focusing on native iOS development using Swift and Objective-C languages;</div><div>- Also I am responsive and flexible during implementation processes, understand principals around app UXExperienced of working on iOS platform and frameworks and customizing it as per requirements;</div><div>- I have an ability to deliver complete user stories independently with high usability and quality;</div><div>- Strong communication skills, both verbal and written, with strong relationship, collaborative and organization skills;</div><div>- Strong organizational skills with the ability to work on multiple projects within tight timelines.</div><div>- Experience in working on cross-platform projects (Flutter).</div></span>
+								<span class="info"><div>- I’m iOS Developer with more than 4-year experience and focusing on native iOS development using Swift and Objective-C languages;</div><div>- Also I am responsive and flexible during implementation processes, understand principals around app UXExperienced of working on iOS platform and frameworks and customizing it as per requirements;</div><div>- I have an ability to deliver complete user stories independently with high usability and quality;</div><div>- Strong communication skills, both verbal and written, with strong relationship, collaborative and organization skills;</div><div>- Strong organizational skills with the ability to work on multiple projects within tight timelines.</div><div>- Experience in working on cross-platform projects (Flutter).</div></span>
 							</div>
 						</div>
 			<div class="clear"> </div>
@@ -294,15 +295,62 @@
 						<span class="date r">November 2020 &mdash; Present</span>
 						</h3>
 						<div class="clear"> </div>
-						<span class="job_title">iOS Developer</span><div class="info"><div><div><span style="font-weight:bold;">Project:</span></div><div><ul><li> <span style="font-style:italic;font-weight:bold;">iMKA 2</span> is an app similar to skycash or mobilet. <br><i>Features</i>: purchase of one-time and periodic tickets, purchase of event tickets, profiling/users, ticket purchase mode in CICO, integration with devices in vehicles - alt beacon, payment processing, parking fees. <br><i>Responsibilities</i>: bug fixing, Creating UI, Develop Custom components, Adding new functionality to existed project, Code review; <br><i>Environment</i>: Xcode, Confluence, Jira, Swift, GCD, CocoaPods, UIKit, Foundation, Realm, Xcode instruments, MVVM, Design patterns, Git(Gitflow), Unit tests, GoogleMaps, URLSession.</li></ul></div></div><div><br /></div></div><div class="clear"> </div>
+						<span class="job_title">iOS Developer</span><div class="info"><div>
+							<div>
+								<span style="font-weight:bold;">Project:</span>
+							</div>
+							<div>
+								<ul>
+									<li>
+										<span style="font-style:italic;font-weight:bold;">iMKA 2</span>
+										is an app similar to skycash or mobilet. <br>
+										<i>Features</i>: purchase of one-time and periodic tickets, purchase of event tickets, profiling/users, ticket purchase mode in CICO, integration with devices in vehicles - alt beacon, payment processing, parking fees. <br>
+										<i>Responsibilities</i>: bug fixing, Creating UI, Develop Custom components, Adding new functionality to existed project, Code review; <br><i>Environment</i>: Xcode, Confluence, Jira, Swift, GCD, CocoaPods, UIKit, Foundation, Realm, Xcode instruments, MVVM, Design patterns, Git(Gitflow), Unit tests, GoogleMaps, URLSession.
+									</li>
+								</ul>
+							</div>
 						</div>
+						<div><br />
+						</div>
+					</div>
+					<div class="clear"> </div>
+						</div>
+						<span class="break-page"></span>
 
 						<div class="item">
 						<h3><span class="company l">Freelance, self-employed</span>
 						<span class="date r">March 2020 &mdash; Present</span>
 						</h3>
 						<div class="clear"> </div>
-						<span class="job_title">iOS Developer</span><div class="info"><div><span style="font-weight:bold;"> Projects:</span></div><div><ul><li><span style="font-style:italic;font-weight:bold;">Montresa.</span> - a mechanical watch. The iOS mobile app has a background service which listens to the corresponding GATT service and based on the configuration in the app, triggers different actions. <br><i>Responsibilities</i>: bug fixing, Full app creating cycle, Push notifications, Implement API and Bluetooth Module, Project mentoring; <br><i>Environment</i>: Xcode, Jira, Swift, CocoaPods, UIKit, Foundation, Xcode instruments, MVC, CoreBluetooth, Git(Gitflow), Postman, Firebase.</li><li><span style="font-weight:bold;font-style:italic;"><a href="https://dental99.com.au" rel="nofollow">Dentist99 iPad app</a> </span>- Application for managing the activities of dentists in a private clinic, schedule, prescriptions and more. <br><i>Responsibilities</i>: bug fixing, Change UI for certain screens, Adding new functionality to existed project, Push notifications, Implement API Module, Project mentoring; <br><i>Environment</i>: Xcode, Jira, Swift, CocoaPods, UIKit, Foundation, Xcode instruments, MVVM, Git(Gitflow), Postman, Design patterns.</li><li><span style="font-style:italic;font-weight:bold;"><a href="https://www.firsthomecoach.co.uk" rel="nofollow">First Home Coach</a> (<a href="https://apps.apple.com/gb/app/virgin-money-home-buying-coach/id1517785229" rel="nofollow">Virgin money</a>, New Zealand) </span>- Web Wrapper. <br><i>Responsibilities</i>: bug fixing, Full app creating cycle, Push notifications, Implement API Module, Project mentoring; <br><i>Environment</i>: Xcode, Jira, Swift, CocoaPods, UIKit, Foundation, Xcode instruments, MVC, Git(Gitflow), Postman, Firebase.</li></ul></div></div><div class="clear"> </div>
+						<span class="job_title">iOS Developer</span>
+						<div class="info">
+							<div>
+								<span style="font-weight:bold;"> Projects:</span>
+							</div>
+							<div>
+								<ul>
+									<li>
+										<span style="font-style:italic;font-weight:bold;">Montresa.</span>
+										 - a mechanical watch. The iOS mobile app has a background service which listens to the corresponding GATT service and based on the configuration in the app, triggers different actions. <br>
+										 <i>Responsibilities</i>: bug fixing, Full app creating cycle, Push notifications, Implement API and Bluetooth Module, Project mentoring; <br>
+										 <i>Environment</i>: Xcode, Jira, Swift, CocoaPods, UIKit, Foundation, Xcode instruments, MVC, CoreBluetooth, Git(Gitflow), Postman, Firebase.</li>
+										 <li>
+											 <span style="font-weight:bold;font-style:italic;">
+												 <a href="https://dental99.com.au" rel="nofollow">Dentist99 iPad app</a> </span>
+												 - Application for managing the activities of dentists in a private clinic, schedule, prescriptions and more. <br>
+												 <i>Responsibilities</i>: bug fixing, Change UI for certain screens, Adding new functionality to existed project, Push notifications, Implement API Module, Project mentoring; <br>
+												 <i>Environment</i>: Xcode, Jira, Swift, CocoaPods, UIKit, Foundation, Xcode instruments, MVVM, Git(Gitflow), Postman, Design patterns.
+											 </li>
+												 <li><span style="font-style:italic;font-weight:bold;">
+													 <a href="https://www.firsthomecoach.co.uk" rel="nofollow">First Home Coach</a> (<a href="https://apps.apple.com/gb/app/virgin-money-home-buying-coach/id1517785229" rel="nofollow">Virgin money</a>, New Zealand) </span>
+													 - Web Wrapper. <br>
+													 <i>Responsibilities</i>: bug fixing, Full app creating cycle, Push notifications, Implement API Module, Project mentoring; <br>
+													 <i>Environment</i>: Xcode, Jira, Swift, CocoaPods, UIKit, Foundation, Xcode instruments, MVC, Git(Gitflow), Postman, Firebase.
+												 </li>
+											 </ul>
+										 </div>
+									 </div>
+									 <div class="clear"> </div>
 						</div>
 
 							<div class="item">
@@ -318,7 +366,9 @@
 							<span class="date r">July 2018 &mdash; January 2020</span>
 								</h3>
 								<div class="clear"> </div>
-								<span class="job_title">iOS Developer</span><div class="info"><div><span style="font-weight:bold;">Projects</span>:</div><div><ul><li><span style="font-style:italic;font-weight:bold;"><a href="https://platform.chdekker.nl" rel="nofollow">CH-Dekker</a> </span>- truck damage recorder application. <br><i>Responsibilities</i>: bug fixing, Full app creating cycle, Develop Custom components, Adding new functionality to existed project, Implement API Module, Project mentoring; <br><i>Environment</i>: Xcode, Fabric, Trello, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, Realm, Xcode instruments, MVC, Design patterns, Git(Gitflow), Postman, Firebase.</li><li><span style="font-weight:bold;font-style:italic;">RPBemanningApp</span> – calendar viewer application. <br><i>Responsibilities</i>: Change UI for certain screens, Change API module functionality, Bugfixing; <br><i>Environment</i>: Xcode, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, VIPER, Design patterns, Git(Gitflow), Sketch, Postman, Firebase.</li><li><span style="font-style:italic;font-weight:bold;"><a href="https://www.zodiacrewards.com/en/business-tools/ion-pool-care" rel="nofollow">iON Pool Care</a></span> - offers you all the tools you need to keep your business organized and running smoothly. <br><i>Responsibilities</i>: Full app creating cycle, Implement API Module, Implement Data Store Module (Realm), Implement Custom Components, Create tasks, Redesign, Bugfixing, Code review, Project mentoring, Investigations for choosing app architecture; <br><i>Environment</i>: Xcode, Fabric, Redmine, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, Realm, Xcode instruments, MVC, Design patterns, Git(Gitflow), Sketch, Postman, Firebase.</li><li><span style="font-weight:bold;font-style:italic;"><a href="https://www.bookaroo.club/app-1" rel="nofollow">Bookaroo</a></span> – iPad application store children's books with the ability to voice and play them. <br><i>Responsibilities</i>: Adding new functionality to existed project, Bugfixing, Full app creating cycle, Implement API Module, Implement Custom Components, Animate elements, Audio playing and recording, Investigations for choosing app architecture; <br><i>Environment</i>: Xcode, Sketch, Flinto, Postman, Swift, Core Animations, AudioKit, GCD, CocoaPods, UIKit, Alamofire, Foundation, Xcode instruments, MVC, Design patterns, Git(Gitflow), Jira.</li><li><span style="font-weight:bold;font-style:italic;">Dog Tracker Mishiko </span>- Mishiko Collar. Your pet looked after. Track your dog’s GPS-coordinates and activity throught the day. The Mishiko Collar lowers this stat by giving your pet’s real-time coordinates with up to 4m accuracy. Involved in redesign work and also adding new functionality to existed project. <br><i>Responsibilities</i>: Implement Dogs Diagnostic flow and send data, Dog routing implementation, Work with GoogleMaps, Customize elements, Custom components Implementation, Adding new functionality to existed project, Bugfixing, Code review, Debug Libraries in Fabric; <br><i>Environment</i>: Xcode, Fabric, Zeplin, Redmine, Objective-C, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, MVC, Design patterns, Git(Gitflow), Flinto, Postman, Jira, Firebase.</li></ul></div></div><div class="clear"> </div>
+								<span class="job_title">iOS Developer</span><div class="info"><div><span style="font-weight:bold;">Projects</span>:</div><div><ul><li><span style="font-style:italic;font-weight:bold;"><a href="https://platform.chdekker.nl" rel="nofollow">CH-Dekker</a> </span>- truck damage recorder application. <br><i>Responsibilities</i>: bug fixing, Full app creating cycle, Develop Custom components, Adding new functionality to existed project, Implement API Module, Project mentoring; <br><i>Environment</i>: Xcode, Fabric, Trello, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, Realm, Xcode instruments, MVC, Design patterns, Git(Gitflow), Postman, Firebase.</li><li><span style="font-weight:bold;font-style:italic;">RPBemanningApp</span> – calendar viewer application. <br><i>Responsibilities</i>: Change UI for certain screens, Change API module functionality, Bugfixing; <br><i>Environment</i>: Xcode, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, VIPER, Design patterns, Git(Gitflow), Sketch, Postman, Firebase.</li><li><span style="font-style:italic;font-weight:bold;"><a href="https://www.zodiacrewards.com/en/business-tools/ion-pool-care" rel="nofollow">iON Pool Care</a></span> - offers you all the tools you need to keep your business organized and running smoothly. <br><i>Responsibilities</i>: Full app creating cycle, Implement API Module, Implement Data Store Module (Realm), Implement Custom Components, Create tasks, Redesign, Bugfixing, Code review, Project mentoring, Investigations for choosing app architecture; <br><i>Environment</i>: Xcode, Fabric, Redmine, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, Realm, Xcode instruments, MVC, Design patterns, Git(Gitflow), Sketch, Postman, Firebase.</li>
+									<span class="break-page"></span>
+									<li><span style="font-weight:bold;font-style:italic;"><a href="https://www.bookaroo.club/app-1" rel="nofollow">Bookaroo</a></span> – iPad application store children's books with the ability to voice and play them. <br><i>Responsibilities</i>: Adding new functionality to existed project, Bugfixing, Full app creating cycle, Implement API Module, Implement Custom Components, Animate elements, Audio playing and recording, Investigations for choosing app architecture; <br><i>Environment</i>: Xcode, Sketch, Flinto, Postman, Swift, Core Animations, AudioKit, GCD, CocoaPods, UIKit, Alamofire, Foundation, Xcode instruments, MVC, Design patterns, Git(Gitflow), Jira.</li><li><span style="font-weight:bold;font-style:italic;">Dog Tracker Mishiko </span>- Mishiko Collar. Your pet looked after. Track your dog’s GPS-coordinates and activity throught the day. The Mishiko Collar lowers this stat by giving your pet’s real-time coordinates with up to 4m accuracy. Involved in redesign work and also adding new functionality to existed project. <br><i>Responsibilities</i>: Implement Dogs Diagnostic flow and send data, Dog routing implementation, Work with GoogleMaps, Customize elements, Custom components Implementation, Adding new functionality to existed project, Bugfixing, Code review, Debug Libraries in Fabric; <br><i>Environment</i>: Xcode, Fabric, Zeplin, Redmine, Objective-C, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, MVC, Design patterns, Git(Gitflow), Flinto, Postman, Jira, Firebase.</li></ul></div></div><div class="clear"> </div>
 								</div>
 							</div>
 			<div class="clear"> </div>
