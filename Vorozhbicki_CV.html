@@ -25,7 +25,8 @@
 				filename:     'Vorozhbicki-CV.pdf',
 				pageBreak:    { mode: 'avoid-all' },
 				image:        { type: 'jpeg', quality: 0.98 },
-				html2canvas:  { dpi: 192, scrollX: 0, scrollY: 0, width: 1060, letterRendering: true },
+				html2canvas:  { dpi: 192, scrollX: 0, scrollY: 0, width: 1060, letterRendering: true, useCORS: true },
+				enableLinks:  true,
 				jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
 			};
 			html2pdf()
@@ -59,7 +60,8 @@
 		#main.pdf-mode .section { margin-bottom: 12px; clear: both; }
 		#main.pdf-mode .item { margin: 4px 0; }
 		#main.pdf-mode hr { margin: 6px 0; }
-		#main.pdf-mode h1 { font-size: 200%; margin-bottom: 0.5rem; }
+		#main.pdf-mode h1#title { font-size: 28pt; margin-bottom: 0.5rem; }
+		#main.pdf-mode .header.photo > h2 { font-size: 16pt; margin-bottom: 0.5rem; }
 		#main.pdf-mode h2 { font-size: 130%; margin-bottom: 0.5rem; }
 		#main.pdf-mode .header.photo { margin-left: 140px; margin-bottom: 60px; }
 		#main.pdf-mode #photo { width: 120px; height: 150px; }
