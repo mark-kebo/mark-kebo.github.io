@@ -114,7 +114,7 @@
 			<h2 class="title">About</h2>
 			<div class="set">
 							<div class="item">
-								<span class="info"><div>- Senior / Staff iOS Software Engineer with 8+ years of experience building and shipping native iOS applications using Swift (SwiftUI, UIKit) and Objective-C;</div><div>- Proven track record of driving engineering initiatives — E2E testing strategy, CI/CD pipelines, documentation standards, and observability with Datadog RUM;</div><div>- Leveraging AI-assisted development tools (Cursor, Cloud Code) to accelerate delivery and improve code quality;</div><div>- Experienced in designing scalable architectures, mentoring engineers, and collaborating cross-functionally to deliver high-impact products with 500K+ active users;</div><div>- Strong communication, organizational, and leadership skills with the ability to manage multiple workstreams and influence technical direction;</div><div>- Experience in working on cross-platform projects (Flutter).</div></span>
+								<span class="info"><div>- Senior / Staff iOS Software Engineer with <span class="years-exp"></span> years of experience building and shipping native iOS applications using Swift (SwiftUI, UIKit) and Objective-C;</div><div>- Proven track record of driving engineering initiatives — E2E testing strategy, CI/CD pipelines, documentation standards, and observability with Datadog RUM;</div><div>- Leveraging AI-assisted development tools (Cursor, Cloud Code) to accelerate delivery and improve code quality;</div><div>- Experienced in designing scalable architectures, mentoring engineers, and collaborating cross-functionally to deliver high-impact products with 500K+ active users;</div><div>- Strong communication, organizational, and leadership skills with the ability to manage multiple workstreams and influence technical direction;</div><div>- Experience in working on cross-platform projects (Flutter).</div></span>
 							</div>
 						</div>
 			<div class="clear"> </div>
@@ -340,5 +340,12 @@
 			<div class="clear"> </div>
 		</div>
 </div>
+<script>
+	document.querySelectorAll('.years-exp').forEach(function (el) {
+		var start = new Date(2018, 5);
+		var years = Math.round((new Date() - start) / (365.25 * 24 * 60 * 60 * 1000));
+		el.textContent = years;
+	});
+</script>
 </body>
 </html>

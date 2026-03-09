@@ -46,7 +46,7 @@
 						<h2>About</h2>
 					</header>
 					<p>
-Senior / Staff iOS Software Engineer with 8+ years of experience building and shipping native iOS applications using Swift (SwiftUI, UIKit) and Objective-C.<br>
+Senior / Staff iOS Software Engineer with <span class="years-exp"></span> years of experience building and shipping native iOS applications using Swift (SwiftUI, UIKit) and Objective-C.<br>
 Proven track record of driving engineering initiatives — including E2E testing strategy, CI/CD pipelines, documentation standards, and observability with Datadog RUM.<br>
 Leveraging AI-assisted development tools (Cursor, Cloud Code) to accelerate delivery and improve code quality.<br>
 Experienced in designing scalable architectures, mentoring engineers, and collaborating cross-functionally to deliver high-impact products with 500K+ active users.<br>
@@ -75,6 +75,13 @@ Strong communication, organizational, and leadership skills with the ability to 
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
+		<script>
+			document.querySelectorAll('.years-exp').forEach(function (el) {
+				var start = new Date(2018, 5);
+				var years = Math.round((new Date() - start) / (365.25 * 24 * 60 * 60 * 1000));
+				el.textContent = years;
+			});
+		</script>
 
 	</body>
 </html>
