@@ -23,19 +23,40 @@
 			var opt = {
 				margin:       0.3,
 				filename:     'Vorozhbicki-CV.pdf',
-				pageBreak:    { mode: 'css', after: '.break-page' },
+				pageBreak:    { mode: 'avoid-all' },
 				image:        { type: 'jpeg', quality: 0.98 },
 				html2canvas:  { dpi: 192, scrollX: 0, scrollY: 0, width: 1060, letterRendering: true, useCORS: true },
-				enableLinks:  true,
 				jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
 			};
-			html2pdf()
-				.set(opt)
-				.from(element)
-				.save()
-				.then(function () {
-					element.classList.remove('pdf-mode');
+			var worker = html2pdf().set(opt).from(element);
+			worker.toPdf().get('pdf').then(function (pdf) {
+				var totalPages = pdf.internal.getNumberOfPages();
+				var pageWidth = pdf.internal.pageSize.getWidth();
+				var pageHeight = pdf.internal.pageSize.getHeight();
+				var margin = 0.3;
+				var canvasWidth = 1060;
+				var scale = (pageWidth - margin * 2) / canvasWidth;
+
+				var links = element.querySelectorAll('a[href]');
+				links.forEach(function (link) {
+					var href = link.getAttribute('href');
+					if (!href || href.startsWith('#')) return;
+					var rect = link.getBoundingClientRect();
+					var elRect = element.getBoundingClientRect();
+					var x = (rect.left - elRect.left) * scale + margin;
+					var y = (rect.top - elRect.top) * scale + margin;
+					var w = rect.width * scale;
+					var h = rect.height * scale;
+					var page = Math.floor(y / pageHeight) + 1;
+					var yOnPage = y - (page - 1) * pageHeight;
+					if (page >= 1 && page <= totalPages) {
+						pdf.setPage(page);
+						pdf.link(x, yOnPage, w, h, { url: href });
+					}
 				});
+			}).save().then(function () {
+				element.classList.remove('pdf-mode');
+			});
 		}, 100);
 	}
 </script>
@@ -51,7 +72,6 @@
 <div id="main">
 	<style>
 		.content { padding: 30px; }
-		.break-page { break-after: page; }
 		#main.pdf-mode {
 			width: 1000px;
 			font-size: 10pt;
@@ -61,8 +81,8 @@
 		#main.pdf-mode .section { margin-bottom: 12px; clear: both; }
 		#main.pdf-mode .item { margin: 4px 0; }
 		#main.pdf-mode hr { margin: 6px 0; }
-		#main.pdf-mode h1#title { font-size: 28pt; margin-bottom: 0.5rem; }
-		#main.pdf-mode .header.photo > h2 { font-size: 16pt; margin-bottom: 0.5rem; }
+		#main.pdf-mode h1#title { font-size: 42pt; margin-bottom: 0.5rem; }
+		#main.pdf-mode .header.photo > h2 { font-size: 24pt; margin-bottom: 0.5rem; }
 		#main.pdf-mode h2 { font-size: 130%; margin-bottom: 0.5rem; }
 		#main.pdf-mode .header.photo { margin-left: 140px; margin-bottom: 60px; }
 		#main.pdf-mode #photo { width: 120px; height: 150px; }
