@@ -23,7 +23,7 @@
 			var opt = {
 				margin:       0.3,
 				filename:     'Vorozhbicki-CV.pdf',
-				pageBreak:    { mode: 'avoid-all' },
+				pageBreak:    { mode: 'css', after: '.break-page' },
 				image:        { type: 'jpeg', quality: 0.98 },
 				html2canvas:  { dpi: 192, scrollX: 0, scrollY: 0, width: 1060, letterRendering: true, useCORS: true },
 				enableLinks:  true,
@@ -51,6 +51,7 @@
 <div id="main">
 	<style>
 		.content { padding: 30px; }
+		.break-page { break-after: page; }
 		#main.pdf-mode {
 			width: 1000px;
 			font-size: 10pt;
@@ -196,6 +197,7 @@
 							<div>
 								Confluence, Jira, Swift, GCD, Bluetooth LE, WatchKit, SPM, CocoaPods, UIKit, Foundation, Realm, Xcode instruments, VC Coordinator, MVVM, Combine, SwiftUI, Design patterns, Git(Gitflow), SwiftLint, Unit tests, GoogleMaps, URLSession, Flutter, Visual Studio Code, Dart, Xcode, AndroidStudio, Github, Web sockets, Feathers(TypeScript).
 							</div>
+							<span class="break-page"></span>
 							<div>
 								<span style="font-weight:bold;">Key Achievements:</span>
 							</div>
