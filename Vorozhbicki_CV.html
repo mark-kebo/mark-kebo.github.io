@@ -23,7 +23,7 @@
 			var opt = {
 				margin:       0.3,
 				filename:     'Vorozhbicki-CV.pdf',
-				pageBreak:    { mode: 'avoid-all' },
+				pageBreak:    { mode: 'legacy' },
 				image:        { type: 'jpeg', quality: 0.98 },
 				html2canvas:  { dpi: 192, scrollX: 0, scrollY: 0, width: 1060, letterRendering: true, useCORS: true },
 				jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
@@ -70,8 +70,8 @@
 </section>
 
 <div id="main">
-	<style>.break-page {break-after: page;}</style>
 	<style>
+		.break-page {break-after: page;}
 		.content { padding: 30px; }
 		#main.pdf-mode {
 			width: 1000px;
