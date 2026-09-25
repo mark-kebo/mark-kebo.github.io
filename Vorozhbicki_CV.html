@@ -1,351 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Dmitry Vorozhbicki CV</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="Generator" content="CV Maker - https://cvmkr.com/" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main-cv.css" />
-	<link rel="stylesheet" href="assets/css/general.css" />
-	<script src="https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.auto.min.js"></script>
-	<script src="jspdf.min.js"></script>
-	<script src="html2canvas.min.js"></script>
-	<script src="html2pdf.min.js"></script>
-</head>
-
-<body class="lang-en ">
-<script>
-	function generatePDF() {
-		var element = document.getElementById("main");
-		element.classList.add('pdf-mode');
-
-		setTimeout(function () {
-			var opt = {
-				margin:       0.3,
-				filename:     'Vorozhbicki-CV.pdf',
-				pageBreak:    { mode: 'legacy' },
-				image:        { type: 'jpeg', quality: 0.98 },
-				html2canvas:  { dpi: 192, scrollX: 0, scrollY: 0, width: 1060, letterRendering: true, useCORS: true },
-				jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
-			};
-			var worker = html2pdf().set(opt).from(element);
-			worker.toPdf().get('pdf').then(function (pdf) {
-				var totalPages = pdf.internal.getNumberOfPages();
-				var pageWidth = pdf.internal.pageSize.getWidth();
-				var pageHeight = pdf.internal.pageSize.getHeight();
-				var margin = 0.3;
-				var canvasWidth = 1060;
-				var scale = (pageWidth - margin * 2) / canvasWidth;
-
-				var links = element.querySelectorAll('a[href]');
-				links.forEach(function (link) {
-					var href = link.getAttribute('href');
-					if (!href || href.startsWith('#')) return;
-					var rect = link.getBoundingClientRect();
-					var elRect = element.getBoundingClientRect();
-					var x = (rect.left - elRect.left) * scale + margin;
-					var y = (rect.top - elRect.top) * scale + margin;
-					var w = rect.width * scale;
-					var h = rect.height * scale;
-					var page = Math.floor(y / pageHeight) + 1;
-					var yOnPage = y - (page - 1) * pageHeight;
-					if (page >= 1 && page <= totalPages) {
-						pdf.setPage(page);
-						pdf.link(x, yOnPage, w, h, { url: href });
-					}
-				});
-			}).save().then(function () {
-				element.classList.remove('pdf-mode');
-			});
-		}, 100);
-	}
-</script>
-
-<section id="footer" class="split style2 special">
-	<footer class="download-cv">
-		<ul class="actions">
-			<button onclick="generatePDF()", class="button">Download as PDF</button>
-		</ul>
-	</footer>
-</section>
-
-<div id="main">
-	<style>
-		.break-page { display: block; padding-top: 40px; }
-		.content { padding: 30px; }
-		#main.pdf-mode {
-			width: 1000px;
-			font-size: 10pt;
-			line-height: 1.4;
-			padding: 15px;
-		}
-		#main.pdf-mode .section { margin-bottom: 12px; clear: both; }
-		#main.pdf-mode .item { margin: 4px 0; }
-		#main.pdf-mode hr { margin: 6px 0; }
-		#main.pdf-mode h1#title { font-size: 28pt; margin-bottom: 0.5rem; }
-		#main.pdf-mode .header.photo > h2 { font-size: 16pt; margin-bottom: 0.5rem; }
-		#main.pdf-mode h2 { font-size: 130%; margin-bottom: 0.5rem; }
-		#main.pdf-mode .header.photo { margin-left: 200px; margin-bottom: 60px; }
-		#main.pdf-mode #photo { width: 180px; height: 225px; }
-		#main.pdf-mode p { margin: 0 0 0.5em 0; }
-		#main.pdf-mode ul { margin: 0 0 0.5em 0; }
-	</style>
-		<div id="photo">
-			<img src="cv_image.jpg" alt="" />
-		</div>
-		<div class="header photo">
-		<h1 id="title">Dmitry Vorozhbicki<br></h1>
-		<h2>Senior / Staff iOS Software Engineer</h2>
-	<div class="basic-info section">
-		<div class="r">
-					<p class="email"><label>E-mail<span class="colon">:</span></label> <span class="value"><a href="mailto:arolij.corp@gmail.com" rel="nofollow">arolij.corp@gmail.com</a></span></p>
-					<p class="phone"><label>Phone<span class="colon">:</span></label> <span class="value"><a href="tel:48578280072" rel="nofollow">+48578280072</a></span></p>
-					<p class="website"><label>Website<span class="colon">:</span></label> <span class="value"><a href="https://mark-kebo.github.io" rel="nofollow">mark-kebo.github.io</a></span></p>
-					<p class="website"><label>LinkedIn<span class="colon">:</span></label> <span class="value"><a href="https://www.linkedin.com/in/dmitry-vorozhbicki-7587aa166" rel="nofollow">linkedin.com/in/dmitry-vorozhbitsky</a></span></p>
-					<p class="website"><label>GitHub<span class="colon">:</span></label> <span class="value"><a href="http://github.com/mark-kebo" rel="nofollow">github.com/mark-kebo</a></span></p>
-		</div>
-		<div class="clear"> </div>
-	</div><!-- basic-info //-->
-	</div>
-
-			<div class="clear"> </div>
-
-			<div class="section section-1287593158087">
-			<h2 class="title">About</h2>
-			<div class="set">
-							<div class="item">
-								<span class="info"><div>- Senior / Staff iOS Software Engineer with <span class="years-exp"></span> years of experience building and shipping native iOS applications using Swift (SwiftUI, UIKit) and Objective-C;</div><div>- Proven track record of driving engineering initiatives — E2E testing strategy, CI/CD pipelines, documentation standards, and observability with Datadog RUM;</div><div>- Leveraging AI-assisted development tools (Cursor, Cloud Code) to accelerate delivery and improve code quality;</div><div>- Experienced in designing scalable architectures, mentoring engineers, and collaborating cross-functionally to deliver high-impact products with 500K+ active users;</div><div>- Strong communication, organizational, and leadership skills with the ability to manage multiple workstreams and influence technical direction;</div><div>- Experience in working on cross-platform projects (Flutter).</div></span>
-							</div>
-						</div>
-			<div class="clear"> </div>
-		</div>
-			<div class="section section-qualifications">
-			<h2 class="title">SKILLS</h2>
-			<div class="set">
-							<div class="item">
-								<span class="info"><div>iOS Development, Swift, Objective-C, GCD, Bluetooth LE, WatchKit, SPM, CocoaPods, UIKit, SwiftUI, SpriteKit, SceneKit, Foundation, Realm, CoreData, Web sockets(socket.io), Combine, Xcode instruments, MVC, MVVM, Viper, IOS SDK, OOP, CI/CD (Fastlane, GitHub Actions), Datadog (RUM, Monitoring), AI-assisted development (Cursor, Cloud Code), E2E Testing, Flutter, Dart, Git(Gitflow), Postman, Jira, Confluence, Figma.</div></span>
-							</div>
-						</div>
-			<div class="clear"> </div>
-		</div>
-			<div class="section section-work">
-			<h2 class="title">Work experience</h2>
-			<div class="set">
-				<div class="item">
-					<span class="company l">Booksy, Warsaw</span>
-					<span class="date r">October 2023 &mdash; Present</span>
-				<div class="clear"> </div>
-				<span class="job_title">Senior iOS Software Engineer | Payments</span>
-				<div class="info"><div>
-					<div>
-						<span style="font-weight:bold;">Responsibilities:</span>
-					</div>
-					<div>
-						 Payments providers integration, work on payments features (Apple Pay, Tap to Pay, Blik), creating UI, develop custom components, unit/UI/E2E testing, CI/CD pipeline maintenance, Datadog RUM integration and monitoring, driving documentation and testing initiatives, AI-assisted development (Cursor, Cloud Code), bug fixing;
-					</div>
-					<div>
-						<span style="font-weight:bold;">Environment:</span>
-					</div>
-					<div>
-						Stripe, Adyen, Xcode, Confluence, Jira, Swift, GCD, SPM, SwiftUI, Foundation, Xcode instruments, Coordinator, MVVM, Combine, Design patterns, Git(Gitflow), SwiftLint, Unit/UI/E2E tests, Alamofire, Github, CI/CD (Fastlane, GitHub Actions), Datadog (RUM, Monitoring), Cursor, Cloud Code.
-					</div>
-					<div>
-						<span style="font-weight:bold;">Key Achievements:</span>
-					</div>
-					<div>
-						Successful launch Tap to Pay feature in US for more than 6000 active users.<br>Successful integration of payments providers in different markets.<br>Initiated and drove E2E testing strategy, significantly improving release confidence.<br>Established documentation standards and engineering best practices across the iOS team.<br>Integrated Datadog RUM for real-time performance monitoring and crash analytics.<br>Adopted AI-assisted development tools (Cursor, Cloud Code), improving team velocity.
-					</div>
-					<div>
-						<span style="font-weight:bold;">Links:</span>
-					</div>
-					<div>
-						<a href="https://apps.apple.com/pl/app/booksy-for-customers/id723961236" rel="nofollow">Booksy for Customers</a> </span><br>
-						<a href="https://apps.apple.com/pl/app/booksy-biz-for-businesses/id725335996" rel="nofollow">‎Booksy for Businesses</a> </span>
-					</div>
-				</div>
-				<div>
-				</div>
-			</div>
-			<div class="clear"> </div>
-				</div>
-				<hr>
-				<div class="item">
-					<span class="company l"><a href="https://gulas.app/en/" rel="nofollow">Goulash, Prague</a></span>
-					<span class="date r">September 2023 &mdash; April 2024</span>
-				<div class="clear"> </div>
-				<span class="job_title">Founding member & Senior iOS Engineer</span>
-				<div class="info"><div>
-					<div>
-						<span style="font-weight:bold;">Responsibilities:</span>
-					</div>
-					<div>
-						Full app creating cycle iOS application, projects mentoring, design system architecture, creating UI, develop custom components, establish development processes (introduce git flow, code review, unit tests and other engineering practices), bug fixing;
-					</div>
-					<div>
-						<span style="font-weight:bold;">Environment:</span>
-					</div>
-					<div>
-						Xcode, Confluence, Jira, Swift, GCD, SPM, SwiftUI, Foundation, Xcode instruments, Coordinator, MVVM, Combine, Design patterns, Git(Gitflow), SwiftLint, Unit tests, URLSession, Github.
-					</div>
-					<div>
-						<span style="font-weight:bold;">Key Achievements:</span>
-					</div>
-					<div>
-						Successful MVP launch.<br>Active participation in the full project development cycle as mobile app architect.
-					</div>
-				</div>
-				<div>
-				</div>
-			</div>
-			<div class="clear"> </div>
-				</div>
-				<hr>
-						<div class="item">
-							<span class="company l">ELTE Group, Kraków</span>
-							<span class="date r">November 2020 &mdash; August 2023</span>
-						<div class="clear"> </div>
-						<span class="job_title">Senior iOS Software Engineer</span>
-						<div class="info"><div>
-							<div>
-								<span style="font-weight:bold;">Responsibilities:</span>
-							</div>
-							<div>
-								Full app creating cycle for different platforms (iOS, Flutter), projects mentoring, design system architecture, creating UI, develop custom components, adding new functionality to existing projects, establish development processes (introduce git flow, code review, unit tests and other engineering practices), bug fixing;
-							</div>
-							<span class="break-page"></span>
-							<div>
-								<span style="font-weight:bold;">Environment:</span>
-							</div>
-							<div>
-								Confluence, Jira, Swift, GCD, Bluetooth LE, WatchKit, SPM, CocoaPods, UIKit, Foundation, Realm, Xcode instruments, VC Coordinator, MVVM, Combine, SwiftUI, Design patterns, Git(Gitflow), SwiftLint, Unit tests, GoogleMaps, URLSession, Flutter, Visual Studio Code, Dart, Xcode, AndroidStudio, Github, Web sockets, Feathers(TypeScript).
-							</div>
-							<div>
-								<span style="font-weight:bold;">Key Achievements:</span>
-							</div>
-							<div>
-								Researched and implemented new coding technologies which increased team productivity.<br>Worked on 4 industrial mobile application projects based on different technologies.<br>Collaborated with a large team to design and launch mobile applications with a total of more than 500,000 active users.
-							</div>
-						</div>
-						<div>
-						</div>
-					</div>
-					<div class="clear"> </div>
-						</div>
-						<hr>
-						<div class="item">
-							<span class="company l">Freelance, self-employed</span>
-							<span class="date r">March 2020 &mdash; December 2023</span>
-						<div class="clear"> </div>
-						<span class="job_title">iOS Software Engineer</span>
-						<div class="info">
-							<div>
-								<span style="font-weight:bold;"> Projects:</span>
-							</div>
-							<div>
-								<ul>
-									<li>
-										<span style="font-style:italic;font-weight:bold;">Montresa.</span>
-										 - a mechanical watch. The iOS mobile app has a background service which listens to the corresponding GATT service and based on the configuration in the app, triggers different actions. <br>
-										 <i>Responsibilities</i>: bug fixing, full app creating cycle, implement API and bluetooth module, project mentoring; <br>
-										 <i>Environment</i>: Xcode, Jira, Swift, CocoaPods, UIKit, Foundation, Xcode instruments, MVC, CoreBluetooth, Git(Gitflow), Postman, Firebase.</li>
-										 <li>
-											 <span style="font-weight:bold;font-style:italic;">
-												 <a href="https://dental99.com.au" rel="nofollow">Dentist99 iPad app</a> </span>
-												 - Application for managing the activities of dentists in a private clinic, schedule, prescriptions and more. <br>
-												 <i>Responsibilities</i>: bug fixing, change UI for certain screens, adding new functionality to existing project, implement API Module, project mentoring, investigations for choosing app architecture; <br>
-												 <i>Environment</i>: Xcode, Jira, Swift, CocoaPods, UIKit, Foundation, Xcode instruments, MVVM, Git(Gitflow), Combine, Postman, Design patterns.
-											 </li>
-												 <li><span style="font-style:italic;font-weight:bold;">
-													 <a href="https://www.firsthomecoach.co.uk" rel="nofollow">First Home Coach</a> (<a href="https://apps.apple.com/gb/app/virgin-money-home-buying-coach/id1517785229" rel="nofollow">Virgin money</a>, New Zealand) </span>
-													 - Web Wrapper. <br>
-													 <i>Responsibilities</i>: bug fixing, full app creating cycle, implement API Module, project mentoring; <br>
-													 <i>Environment</i>: Xcode, Jira, Swift, CocoaPods, UIKit, Foundation, Xcode instruments, MVC, Git(Gitflow), Postman, Firebase.
-												 </li>
-											 </ul>
-										 </div>
-									 </div>
-						</div>
-						<hr>
-
-							<div class="item">
-								<span class="company l">Norbsoft | Mobile App Design &amp; Development, Kraków</span>
-								<span class="date r">January 2020 &mdash; October 2020</span>
-								<div class="clear"> </div>
-								<span class="job_title">iOS Developer</span>
-								<div class="info"><div>
-									<div>
-										<span style="font-weight:bold;">Project:</span>
-									</div>
-									<div>
-										<ul>
-											<li>
-												<span style="font-style:italic;font-weight:bold;">
-													<a href="https://apps.apple.com/pl/app/modivo/id1498122497" rel="nofollow">Modivo</a>
-												</span> - Online clothing store. <br>
-												<i>Responsibilities</i>: bug fixing, change UI for certain screens, develop custom components, adding new functionality to existing project; <br>
-												<i>Environment</i>: Xcode, Postman, Confluence, Jira, Swift, RxSwift, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, MVVM, Design patterns, Git(Gitflow).
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div>
-								</div>
-							</div>
-							<div class="clear"> </div>
-							</div>
-							<hr>
-								<div class="item">
-									<span class="company l">Cogniteq, Grodno</span>
-									<span class="date r">July 2018 &mdash; January 2020</span>
-								<div class="clear"> </div>
-								<span class="job_title">iOS Developer</span><div class="info"><div><span style="font-weight:bold;">Projects</span>:</div><div><ul><li><span style="font-style:italic;font-weight:bold;"><a href="https://platform.chdekker.nl" rel="nofollow">CH-Dekker</a> </span>- truck damage recorder application. <br><i>Responsibilities</i>: bug fixing, full app creating cycle, develop custom components, adding new functionality to existing project, implement API module, project mentoring; <br><i>Environment</i>: Xcode, Fabric, Trello, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, Realm, Xcode instruments, MVC, Design patterns, Git(Gitflow), Postman, Firebase.</li><li><span style="font-weight:bold;font-style:italic;">RPBemanningApp</span> – calendar viewer application. <br><i>Responsibilities</i>: change UI for certain screens, change API module functionality, bugfixing; <br><i>Environment</i>: Xcode, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, VIPER, Design patterns, Git(Gitflow), Sketch, Postman, Firebase.</li><li><span style="font-style:italic;font-weight:bold;"><a href="https://www.zodiacrewards.com/en/business-tools/ion-pool-care" rel="nofollow">iON Pool Care</a></span> - offers you all the tools you need to keep your business organized and running smoothly.<br><i>Responsibilities</i>: full app creating cycle, implement API module, implement data store module (Realm), implement custom components, create tasks, redesign, bugfixing, code review; <br><i>Environment</i>: Xcode, Fabric, Redmine, Jira, Swift, GCD, CocoaPods, UIKit, Alamofire, Foundation, Realm, Xcode instruments, MVC, Design patterns, Git(Gitflow), Sketch, Postman, Firebase.</li>
-									<li><span style="font-weight:bold;font-style:italic;"><a href="https://www.bookaroo.club/app-1" rel="nofollow">Bookaroo</a></span> – iPad application store children's books with the ability to voice and play them. <br>
-										<i>Responsibilities</i>: adding new functionality to existing project, bugfixing, full app creating cycle, implement API module, implement custom components, animate elements, audio playing and recording, investigations for choosing app architecture; <br><i>Environment</i>: Xcode, Sketch, Flinto, Postman, Swift, Core Animations, AudioKit, GCD, CocoaPods, UIKit, Alamofire, Foundation, Xcode instruments, MVC, Design patterns, Git(Gitflow), Jira.</li><li><span style="font-weight:bold;font-style:italic;">Dog Tracker Mishiko </span>- Mishiko Collar. Your pet looked after. Track your dog's GPS-coordinates and activity throughout the day. The Mishiko Collar lowers this stat by giving your pet's real-time coordinates with up to 4m accuracy. Involved in redesign work and also adding new functionality to existing project. <br><i>Responsibilities</i>: implement Dogs Diagnostic flow and send data, dog routing implementation, work with GoogleMaps, customize elements, custom components implementation, adding new functionality to existing project, bugfixing, code review, debug libraries in Fabric; <br><i>Environment</i>: Xcode, Fabric, Zeplin, Redmine, Objective-C, GCD, CocoaPods, UIKit, Alamofire, Foundation, CoreData, Xcode instruments, MVC, Design patterns, Git(Gitflow), Flinto, Postman, Jira, Firebase.</li></ul></div></div><div class="clear"> </div>
-								</div>
-							</div>
-			<div class="clear"> </div>
-		</div>
-			<div class="section section-education">
-			<h2 class="title">Education</h2>
-			<div class="set">
-						<div class="item">
-							<span class="company l">Engineer's degree</span>
-							<span class="date r">August 2014 &mdash; August 2019</span>
-							<div class="clear"> </div>
-							<span class="school">Yanka Kupala St. University of Grodno</span>
-							<div class="info">Physico-Technical Faculty, Information and measuring technology</div>
-							<span class="clear"></span>
-						</div>
-
-						<div class="item">
-							<span class="company l">Master's degree</span>
-							<span class="date r">September 2019 &mdash; September 2021</span>
-							<div class="clear"> </div>
-							<span class="school">Jagiellonian University Cracow</span><div class="info">Computer Games and Programming Skills</div><span class="clear"> </span>
-						</div>
-						</div>
-			<div class="clear"> </div>
-		</div>
-			<div class="section section-interests">
-			<h2 class="title">LANGUAGES</h2>
-			<div class="set">
-							<div class="item">
-								<span class="info">
-									<div><span style="font-style:italic;font-weight:bold;">Belarusian, Russian</span> - Native</div>
-									<div><span style="font-style:italic;font-weight:bold;">Polish</span> - Full professional proficiency (C1)</div>
-									<div><span style="font-style:italic;font-weight:bold;">English</span> - Professional working proficiency (B2+)</div>
-								</span>
-							</div>
-						</div>
-			<div class="clear"> </div>
-		</div>
-</div>
-<script>
-	document.querySelectorAll('.years-exp').forEach(function (el) {
-		var start = new Date(2018, 5);
-		var years = Math.round((new Date() - start) / (365.25 * 24 * 60 * 60 * 1000));
-		el.textContent = years;
-	});
-</script>
-</body>
-</html>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dmitry Vorozhbicki CV | Mobile Architecture and AI-Assisted Engineering</title>
+<meta name="description" content="CV of Dmitry Vorozhbicki: senior mobile engineer, mobile architecture, technical leadership, and AI-assisted engineering with Claude Code and Cursor.">
+<link rel="canonical" href="https://mark-kebo.github.io/Vorozhbicki_CV.html">
+<link rel="icon" href="favicon.ico"><link rel="stylesheet" href="assets/css/cv-profile.css">
+</head><body>
+<nav aria-label="CV navigation"><a href="index.html">Back to profile</a><a href="Vorozhbicki_CV.pdf" download>Download PDF</a><a href="Dmitry_Vorozhbicki_CV.docx" download>Download Word</a></nav>
+<main><header><h1>Dmitry Vorozhbicki</h1><p class="positioning">Mobile Architecture &amp; AI-Assisted Engineering</p>
+<p><a href="mailto:arolij.corp@gmail.com">arolij.corp@gmail.com</a> · <a href="tel:+48578280072">+48 578 280 072</a></p>
+<p><a href="https://www.linkedin.com/in/dmitry-vorozhbicki-7587aa166/">LinkedIn</a> · <a href="https://github.com/mark-kebo">GitHub</a> · <a href="https://mark-kebo.github.io/">Website</a></p></header>
+<p>Senior Mobile Software Engineer with 8+ years of experience in native iOS development, mobile architecture, and payment systems. Leads technical initiatives from RFCs and architectural decisions through cross-team alignment and rollout. Two years of hands-on AI-assisted engineering experience, applying agents, skills, and structured specifications across design, implementation, testing, and refactoring. Combines architectural ownership with production delivery and measurable reliability improvements.</p>
+<h2>Core expertise</h2>
+<p>Architecture and leadership: Mobile architecture, system design, RFCs, ADRs, technical design documents, cross-team technical leadership, migration planning, mentoring, technical interviews.</p>
+<p>AI-assisted engineering: AI agents and skills, Claude Code, Cursor, specification-driven development, documentation for AI workflows, AI-assisted testing and refactoring, team knowledge sharing.</p>
+<p>Engineering: Swift, SwiftUI, UIKit, Objective-C, MVVM, Coordinator, Combine, Codable, REST APIs, Stripe, Apple Pay, Tap to Pay, E2E testing, CI/CD, Fastlane, GitHub Actions, Datadog RUM.</p>
+<h2>Professional experience</h2>
+<h3>Senior Mobile Software Engineer</h3>
+<p>Booksy | Payments | Warsaw | Oct 2023 - Present</p>
+<ul><li>Initiated and led Pay by App modernization over 4-5 months, coordinating Payments and Booking teams on migration to POS2 APIs and preparing a primary payment flow for subsequent removal of several thousand lines of legacy code.</li><li>Owned the ADR and RFC for a new iOS navigation pattern, aligned engineers across teams, coordinated testing, and supported successful rollout. Authored the Apple Pay migration RFC and coordinated adoption of Stripe-native components through completion.</li><li>Rewrote all 38 Customer and Biz E2E tests using existing documentation and AI-assisted development, achieving approximately 98% average success rates and improving observability and maintainability.</li><li>Established E2E guidance through two RFCs, Cursor rules, and CI/CD improvements across frontend platforms; promoted clearer specifications and reusable engineering practices.</li><li>Integrated AI into design, implementation, testing, documentation, and refactoring. Prepared the “Docs for Humans and AI” Tech Share to help engineers write actionable specifications and retain ownership of technical decisions.</li><li>Migrated approximately 78 API models from SwiftyJSON to Codable and removed legacy parsing paths. Delivered Tap to Pay, KYC onboarding, Tax ID, Payment Settings, and Platform Fees improvements.</li><li>Maintained Datadog dashboards and monitoring for Tap to Pay and Booksy Card Reader, investigating production anomalies and navigation and lifecycle defects.</li><li>Implemented Nethone fraud prevention and documented decisions in an ADR for the iOS guild. Supported the Stripe migration for Brazil and removed legacy Adyen code.</li><li>Contributed to technical interviews, mentoring, and cross-team RFC reviews. Led an internal session on iOS memory management and memory-leak prevention.</li><li>Co-built an AI agent for code review; the team placed 3rd among 30 teams at the Booksy AI hackathon.</li></ul>
+<h3>Founding Member and Senior iOS Engineer</h3>
+<p>Goulash | Prague | Sep 2023 - Apr 2024</p>
+<ul><li>Helped launch the MVP, shaping mobile application architecture and delivering the full iOS development cycle with SwiftUI, MVVM, Coordinator, and Combine.</li><li>Established development practices including Git workflow, code review, and unit testing; mentored project contributors.</li></ul>
+<h3>Senior iOS Software Engineer</h3>
+<p>ELTE Group | Kraków | Nov 2020 - Aug 2023</p>
+<ul><li>Designed mobile architecture and delivered four industrial application projects across native iOS and Flutter, including Bluetooth LE and real-time integrations.</li><li>Collaborated on applications serving more than 500,000 active users in total; mentored engineers and introduced code review, unit tests, and development workflows.</li></ul>
+<h3>iOS Software Engineer</h3>
+<p>Freelance | Self-employed | Mar 2020 - Dec 2023</p>
+<ul><li>Delivered and maintained applications for connected watches, dental practice management, and financial services. Built API and Bluetooth modules, advised on architecture, and mentored projects.</li></ul>
+<h3>iOS Developer</h3>
+<p>Norbsoft | Kraków | Jan 2020 - Oct 2020</p>
+<ul><li>Developed features and reusable UI components for the Modivo commerce application using Swift, UIKit, RxSwift, and MVVM.</li></ul>
+<h3>iOS Developer</h3>
+<p>Cogniteq | Grodno | Jul 2018 - Jan 2020</p>
+<ul><li>Built and maintained business and consumer iOS apps covering field operations, scheduling, audio books, and pet tracking, including APIs, local persistence, maps, and audio functionality.</li></ul>
+<h2>Education</h2>
+<p>Master’s degree, Computer Games and Programming Skills<br>Jagiellonian University, Kraków | Sep 2019 - Sep 2021</p>
+<p>Engineer’s degree, Information and Measuring Technology<br>Yanka Kupala State University of Grodno | Aug 2014 - Aug 2019</p>
+<h2>Languages</h2>
+<p>English: B2+ | Polish: C1 | Belarusian and Russian: Native</p>
+</main></body></html>

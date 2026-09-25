@@ -1,0 +1,8 @@
+#intro .content .current-role { font-size: 1em; }
+#intro .content { min-width: 0; }
+.wrapper.special .inner > p { max-width: 58rem; margin-left: auto; margin-right: auto; }
+.impact-list { list-style: none; max-width: 58rem; margin: 0 auto 2rem; padding: 0; text-align: left; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 3rem; }
+.impact-list li { padding: 0; }
+.impact-list strong { display: block; margin-bottom: .5rem; }
+.impact-list span { display: block; }
+@media (max-width: 736px) { .impact-list { grid-template-columns: 1fr; gap: 1.5rem; } #intro .content p { overflow-wrap: anywhere; } }
